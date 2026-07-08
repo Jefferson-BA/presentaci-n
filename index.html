@@ -280,70 +280,120 @@
     <section class="slide" data-slide="5" aria-label="Cronograma y Gantt">
       <div class="slide__content slide__content--wide">
         <p class="eyebrow reveal">Planificación</p>
-        <h2 class="slide-title reveal d1">Cronograma y Diagrama de Gantt</h2>
-        <p class="slide-lead reveal d2">Fases del proyecto De Parra Spitz — Sprints S8 a S15 (Mayo – Julio 2026).</p>
+        <h2 class="slide-title reveal d1">Diagrama de Gantt y Cronograma</h2>
+        <p class="slide-lead reveal d2">Cronograma del proyecto De Parra Spitz — Sprints S8 a S16 (Mayo – Julio 2026).</p>
 
-        <div class="gantt reveal d3">
-          <div class="gantt__head">
-            <span class="gantt__label-col">Fase / Actividad</span>
-            <div class="gantt__months">
-              <span>May S8–S11</span>
-              <span>Jun S12–S13</span>
-              <span>Jun S14</span>
-              <span>Jul S15</span>
-            </div>
-          </div>
-
-          <div class="gantt__row" style="--phase-color: var(--accent)">
-            <span class="gantt__task"><strong>Fase 1</strong> Configuración Core y DB</span>
-            <div class="gantt__track">
-              <div class="gantt__bar" style="--start:1;--end:4;--color:var(--accent)">
-                <span>Diseño Figma · Skills · Arquitectura · BD</span>
+        <div class="gantt-layout reveal d3">
+          <div class="gantt">
+            <div class="gantt__head">
+              <span class="gantt__label-col">Actividad</span>
+              <div class="gantt__sprints">
+                <span><strong>S8</strong><small>07-13 May</small></span>
+                <span><strong>S9</strong><small>14-20 May</small></span>
+                <span><strong>S10</strong><small>21-27 May</small></span>
+                <span><strong>S11</strong><small>28 May-04 Jun</small></span>
+                <span><strong>S12</strong><small>05-11 Jun</small></span>
+                <span><strong>S13</strong><small>12-18 Jun</small></span>
+                <span><strong>S14</strong><small>19-25 Jun</small></span>
+                <span><strong>S16</strong><small>26 Jun-07 Jul</small></span>
               </div>
+              <span class="gantt__pct-col">Avance</span>
             </div>
-            <span class="gantt__pct">100%</span>
-          </div>
 
-          <div class="gantt__row" style="--phase-color: #5B8DEF">
-            <span class="gantt__task"><strong>Fase 2</strong> Módulos de Negocio y Pagos</span>
-            <div class="gantt__track">
-              <div class="gantt__bar" style="--start:3;--end:5;--color:#5B8DEF">
-                <span>Frontend/Backend · Auth · Culqi</span>
+            <div class="gantt__row">
+              <span class="gantt__task">Diseño en figma maker</span>
+              <div class="gantt__track">
+                <div class="gantt__bar-wrap" style="--start:1;--span:1">
+                  <div class="gantt__bar" style="--color:#4A7FD4"></div>
+                </div>
               </div>
+              <span class="gantt__pct gantt__pct--done">100%</span>
             </div>
-            <span class="gantt__pct">80%</span>
-          </div>
 
-          <div class="gantt__row" style="--phase-color: #9B6BFF">
-            <span class="gantt__task"><strong>Fase 3</strong> Integración IA y OpenRouter</span>
-            <div class="gantt__track">
-              <div class="gantt__bar gantt__bar--partial" style="--start:4;--end:6;--color:#9B6BFF;--fill:60%">
-                <span>Chatbot SSE · pgvector · OpenRouter</span>
+            <div class="gantt__row">
+              <span class="gantt__task">Skills Utilizables</span>
+              <div class="gantt__track">
+                <div class="gantt__bar-wrap" style="--start:1;--span:2">
+                  <div class="gantt__bar" style="--color:#3DADA8"></div>
+                </div>
               </div>
+              <span class="gantt__pct gantt__pct--done">100%</span>
             </div>
-            <span class="gantt__pct">60%</span>
-          </div>
 
-          <div class="gantt__row" style="--phase-color: #4ADE80">
-            <span class="gantt__task"><strong>Fase 4</strong> Despliegue Producción y QA</span>
-            <div class="gantt__track">
-              <div class="gantt__bar gantt__bar--partial" style="--start:5;--end:7;--color:#4ADE80;--fill:65%">
-                <span>Pruebas · Integración · Documentación</span>
+            <div class="gantt__row">
+              <span class="gantt__task">Diseño del sistema</span>
+              <div class="gantt__track">
+                <div class="gantt__bar-wrap" style="--start:3;--span:1">
+                  <div class="gantt__bar" style="--color:#9B6BFF"></div>
+                </div>
               </div>
+              <span class="gantt__pct gantt__pct--done">100%</span>
             </div>
-            <span class="gantt__pct">65%</span>
-          </div>
-        </div>
 
-        <div class="phase-legend reveal d4">
-          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:var(--accent)"></span>Fase 1
-            — Core &amp; DB</div>
-          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#5B8DEF"></span>Fase 2 —
-            Negocio &amp; Pagos</div>
-          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#9B6BFF"></span>Fase 3 — IA
+            <div class="gantt__row">
+              <span class="gantt__task">Diseño de la base de datos</span>
+              <div class="gantt__track">
+                <div class="gantt__bar-wrap" style="--start:4;--span:1">
+                  <div class="gantt__bar" style="--color:var(--accent)"></div>
+                </div>
+              </div>
+              <span class="gantt__pct gantt__pct--done">100%</span>
+            </div>
+
+            <div class="gantt__row">
+              <span class="gantt__task">Frontend / Backend</span>
+              <div class="gantt__track">
+                <div class="gantt__bar-wrap" style="--start:5;--span:3">
+                  <div class="gantt__bar gantt__bar--partial" style="--color:#3B6FD4;--fill:80%"></div>
+                </div>
+              </div>
+              <span class="gantt__pct">70%</span>
+            </div>
+
+            <div class="gantt__row">
+              <span class="gantt__task">Integración del sistema</span>
+              <div class="gantt__track">
+                <div class="gantt__bar-wrap" style="--start:5;--span:3">
+                  <div class="gantt__bar gantt__bar--partial" style="--color:#3DADA8;--fill:60%"></div>
+                </div>
+              </div>
+              <span class="gantt__pct">60%</span>
+            </div>
+
+            <div class="gantt__row">
+              <span class="gantt__task">Pruebas y ajustes</span>
+              <div class="gantt__track">
+                <div class="gantt__bar-wrap" style="--start:7;--span:2">
+                  <div class="gantt__bar gantt__bar--partial" style="--color:#5CB85C;--fill:70%"></div>
+                </div>
+              </div>
+              <span class="gantt__pct">70%</span>
+            </div>
+
+            <div class="gantt__row gantt__row--last">
+              <span class="gantt__task">Documentación completa</span>
+              <div class="gantt__track">
+                <div class="gantt__bar-wrap" style="--start:7;--span:2">
+                  <div class="gantt__bar gantt__bar--partial" style="--color:#78716C;--fill:60%"></div>
+                </div>
+              </div>
+              <span class="gantt__pct">50%</span>
+            </div>
           </div>
-          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#4ADE80"></span>Fase 4 —
-            Producción &amp; QA</div>
+
+          <aside class="gantt-summary reveal d4">
+            <h3 class="gantt-summary__title">Progreso General</h3>
+            <ul class="gantt-summary__list">
+              <li><span>Diseño en figma maker</span><strong class="done">100%</strong></li>
+              <li><span>Skills Utilizables</span><strong class="done">100%</strong></li>
+              <li><span>Diseño del sistema</span><strong class="done">100%</strong></li>
+              <li><span>Diseño BD</span><strong class="done">100%</strong></li>
+              <li><span>Frontend / Backend</span><strong>70%</strong></li>
+              <li><span>Integración</span><strong>60%</strong></li>
+              <li><span>Pruebas</span><strong>70%</strong></li>
+              <li><span>Documentación</span><strong>50%</strong></li>
+            </ul>
+          </aside>
         </div>
       </div>
       <footer class="slide__footer">06 / 13</footer>

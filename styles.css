@@ -823,86 +823,137 @@ html, body {
 }
 
 /* ─── Gantt ─── */
+.gantt-layout {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 16px;
+  align-items: start;
+}
+
 .gantt {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 16px 18px;
+  overflow-x: auto;
 }
 
 .gantt__head {
   display: grid;
-  grid-template-columns: 220px 1fr 52px;
-  gap: 12px;
-  padding-bottom: 12px;
-  margin-bottom: 8px;
+  grid-template-columns: 168px 1fr 52px;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
   border-bottom: 1px solid var(--border);
 }
 
-.gantt__label-col {
-  font-size: 0.68rem;
+.gantt__label-col,
+.gantt__pct-col {
+  font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
 
-.gantt__months {
+.gantt__pct-col {
+  text-align: right;
+}
+
+.gantt__sprints {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
   text-align: center;
 }
 
-.gantt__months span {
+.gantt__sprints span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px 2px;
+  border-radius: 4px;
+  background: var(--surface-alt);
+}
+
+.gantt__sprints strong {
   font-size: 0.72rem;
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.gantt__sprints small {
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .gantt__row {
   display: grid;
-  grid-template-columns: 220px 1fr 52px;
-  gap: 12px;
+  grid-template-columns: 168px 1fr 52px;
+  gap: 10px;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(45, 45, 45, 0.5);
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(45, 45, 45, 0.45);
+}
+
+.gantt__row:nth-child(even) {
+  background: rgba(255, 255, 255, 0.015);
+  margin: 0 -8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 4px;
+}
+
+.gantt__row--last {
+  border-bottom: none;
 }
 
 .gantt__task {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   color: var(--text-stone-200);
-  line-height: 1.4;
-}
-
-.gantt__task strong {
-  color: var(--text-primary);
+  line-height: 1.35;
+  font-weight: 500;
 }
 
 .gantt__track {
   position: relative;
-  height: 32px;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 3px;
+  height: 26px;
+  min-width: 480px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--surface-alt);
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent calc(12.5% - 1px),
+    var(--border) calc(12.5% - 1px),
+    var(--border) 12.5%
+  );
+}
+
+/* Posicionamiento por columna: --start (1-8), --span (1-8) */
+.gantt__bar-wrap {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: calc((var(--start) - 1) * 12.5%);
+  width: calc(var(--span) * 12.5%);
+  padding: 0 2px;
+  box-sizing: border-box;
 }
 
 .gantt__bar {
-  grid-column: var(--start) / var(--end);
+  width: 100%;
+  height: 100%;
   background: var(--color, var(--accent));
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  font-size: 0.68rem;
-  font-weight: 500;
-  color: var(--bg-base);
-  white-space: nowrap;
-  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
   transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.8s var(--ease);
+  transform-origin: left center;
+  transition: transform 0.7s var(--ease);
 }
 
 .slide.active .gantt__bar {
@@ -922,14 +973,79 @@ html, body {
   width: calc(100% - var(--fill, 100%));
   background: var(--surface-alt);
   border-radius: 0 4px 4px 0;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
 .gantt__pct {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-align: right;
   color: var(--accent);
+}
+
+.gantt__pct--done {
+  color: #5CB85C;
+}
+
+/* Progress sidebar */
+.gantt-summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: var(--transition);
+}
+
+.gantt-summary:hover {
+  border-color: var(--accent);
+}
+
+.gantt-summary__title {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.gantt-summary__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.gantt-summary__list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(45, 45, 45, 0.4);
+  font-size: 0.72rem;
+}
+
+.gantt-summary__list li:last-child {
+  border-bottom: none;
+}
+
+.gantt-summary__list span {
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.gantt-summary__list strong {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.gantt-summary__list strong.done {
+  color: #5CB85C;
 }
 
 .phase-legend {
@@ -1470,8 +1586,12 @@ html, body {
   .arch-topo__fork::before,
   .arch-topo__merge::before { left: 5%; right: 5%; }
 
+  .gantt-layout { grid-template-columns: 1fr; }
+  .gantt-summary { order: -1; }
+
   .gantt__head,
-  .gantt__row { grid-template-columns: 1fr; gap: 4px; }
+  .gantt__row { grid-template-columns: 130px 1fr 44px; gap: 6px; }
+  .gantt__sprints small { font-size: 0.5rem; }
   .gantt__pct { text-align: left; }
 
   .compare-banner { flex-direction: column; gap: 12px; }
