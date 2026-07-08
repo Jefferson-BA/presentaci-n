@@ -465,6 +465,184 @@ html, body {
   border-color: rgba(201, 151, 74, 0.3);
 }
 
+/* ─── Architecture Topology (Full Diagram) ─── */
+.arch-topo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.arch-topo__node {
+  text-align: center;
+  width: 100%;
+  max-width: 340px;
+  padding: 16px 20px;
+}
+
+.arch-topo__node strong {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.arch-topo__node small {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.arch-topo__cost {
+  display: block;
+  font-size: 0.68rem;
+  font-style: normal;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.arch-topo__cost--accent {
+  color: var(--accent);
+}
+
+.arch-topo__db-detail {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-stone-200);
+  margin: 6px 0;
+}
+
+.arch-topo__node--actors {
+  max-width: 420px;
+  border-color: var(--text-muted-dark);
+}
+
+.arch-topo__node--cf {
+  border-color: #F48120;
+  background: rgba(244, 129, 32, 0.08);
+}
+
+.arch-topo__node--core {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+  max-width: 100%;
+}
+
+.arch-topo__node--culqi {
+  border-color: #00A19A;
+  background: rgba(0, 161, 154, 0.08);
+  max-width: 220px;
+}
+
+.arch-topo__node--ai {
+  border-color: #9B6BFF;
+  background: rgba(155, 107, 255, 0.08);
+}
+
+.arch-topo__node--r2 {
+  border-color: #F48120;
+  background: rgba(244, 129, 32, 0.06);
+}
+
+.arch-topo__node--db {
+  max-width: 520px;
+  border-color: #5B8DEF;
+  background: rgba(91, 141, 239, 0.08);
+}
+
+.arch-topo__node--module {
+  max-width: 100%;
+  padding: 12px 16px;
+}
+
+.arch-topo__line {
+  width: 2px;
+  height: 24px;
+  background: var(--border);
+}
+
+.arch-topo__line--short {
+  height: 16px;
+}
+
+.arch-topo__fork,
+.arch-topo__merge {
+  position: relative;
+  width: 72%;
+  height: 24px;
+}
+
+.arch-topo__fork::before,
+.arch-topo__merge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: var(--border);
+}
+
+.arch-topo__fork::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 24px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.arch-topo__merge::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  height: 24px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.arch-topo__columns {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 32px;
+  width: 100%;
+  align-items: start;
+}
+
+.arch-topo__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arch-topo__column--wide {
+  align-items: stretch;
+}
+
+.arch-topo__modules {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.arch-topo .tag {
+  margin-top: 8px;
+}
+
 /* ─── Pain Grid ─── */
 .pain-grid {
   display: grid;
@@ -1286,6 +1464,11 @@ html, body {
   .arch-flow__split { flex-direction: column; gap: 0; align-items: center; }
   .arch-flow__split::before { display: none; }
   .arch-flow__node--data { min-width: unset; }
+
+  .arch-topo__columns { grid-template-columns: 1fr; gap: 16px; }
+  .arch-topo__modules { grid-template-columns: 1fr; }
+  .arch-topo__fork::before,
+  .arch-topo__merge::before { left: 5%; right: 5%; }
 
   .gantt__head,
   .gantt__row { grid-template-columns: 1fr; gap: 4px; }

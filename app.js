@@ -12,6 +12,8 @@
   const nextBtn = document.getElementById('nextBtn');
   const slideIndicator = document.getElementById('slideIndicator');
 
+  const TRANSITION_MS = 500;
+
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.className = 'nav-rail__dot' + (i === 0 ? ' active' : '');
@@ -33,6 +35,17 @@
     });
   }
 
+  /** Elimina estilos inline que bloquean la visibilidad al retroceder */
+  function clearInlineStyles(slide) {
+    if (!slide) return;
+    slide.style.transform = '';
+    slide.style.opacity = '';
+    slide.style.visibility = '';
+    slide.querySelectorAll('.reveal, .gantt__bar').forEach((el) => {
+      el.removeAttribute('style');
+    });
+  }
+
   function goTo(index) {
     if (animating || index === current || index < 0 || index >= total) return;
     animating = true;
@@ -41,31 +54,37 @@
     const out = slides[current];
     const inc = slides[index];
 
-    out.classList.remove('active');
-    out.classList.add(dir > 0 ? 'prev' : '');
+    clearInlineStyles(inc);
 
-    inc.classList.add('active');
+    out.classList.remove('active', 'prev');
+    if (dir > 0) {
+      out.classList.add('prev');
+    }
+
+    inc.classList.remove('prev');
+
+    if (dir < 0) {
+      inc.style.transform = 'translateY(-24px)';
+      inc.style.opacity = '0';
+      inc.classList.add('active');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          inc.style.transform = '';
+          inc.style.opacity = '';
+        });
+      });
+    } else {
+      inc.classList.add('active');
+    }
 
     setTimeout(() => {
       out.classList.remove('prev');
+      clearInlineStyles(out);
+      clearInlineStyles(inc);
       current = index;
       updateUI();
       animating = false;
-      replayAnimations(inc);
-    }, 500);
-  }
-
-  function replayAnimations(slide) {
-    slide.querySelectorAll('.reveal, .gantt__bar').forEach(el => {
-      el.style.transition = 'none';
-      el.style.opacity = '0';
-      el.style.transform = el.classList.contains('gantt__bar') ? 'scaleX(0)' : 'translateY(20px)';
-      requestAnimationFrame(() => {
-        el.style.transition = '';
-        el.style.opacity = '';
-        el.style.transform = '';
-      });
-    });
+    }, TRANSITION_MS);
   }
 
   function next() { goTo(current + 1); }
@@ -109,5 +128,6 @@
     }, 60);
   }, { passive: true });
 
+  slides.forEach(clearInlineStyles);
   updateUI();
 })();

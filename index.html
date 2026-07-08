@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arquitectura Lean Enterprise 2026 — De Parra Spitz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <header class="deck-header">
@@ -21,7 +25,8 @@
     </div>
   </header>
 
-  <div class="progress-bar" id="progressBar" role="progressbar" aria-valuemin="1" aria-valuemax="13" aria-valuenow="1"></div>
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-valuemin="1" aria-valuemax="13" aria-valuenow="1">
+  </div>
 
   <nav class="nav-rail" id="navRail" aria-label="Navegación de diapositivas"></nav>
 
@@ -31,139 +36,161 @@
     <section class="slide slide--cover active" data-slide="0" aria-label="Portada ejecutiva">
       <div class="slide__content slide__content--center">
         <p class="eyebrow reveal">De Parra Spitz · Hoja de Parra Spitz</p>
-        <h1 class="hero-title reveal d1">Arquitectura Lean<br>Enterprise 2026</h1>
+        <h1 class="hero-title reveal d1">De Parra Spitz<br>catering & eventos</h1>
         <div class="hero-rule reveal d2"></div>
-        <p class="hero-subtitle reveal d2">Escalabilidad e Inteligencia Artificial con Eficiencia de Costos</p>
+        <p class="hero-subtitle reveal d2">Desarrollo de un sistema web para la
+          gestión de reservas en la empresa de
+          catering Hoja de Parra Spitz</p>
         <div class="hero-badges reveal d3">
-          <span class="badge">Cloud Native</span>
+          <span class="badge">Proyecto empresarial</span>
           <span class="badge badge--accent">IA Conversacional</span>
-          <span class="badge">Costo $0 Inicial</span>
+          <span class="badge">2da presentación</span>
         </div>
         <p class="hero-footnote reveal d4">Sistema web para gestión de reservas y pedidos en catering</p>
       </div>
       <footer class="slide__footer">01 / 13</footer>
     </section>
 
-    <!-- SLIDE 2 · VISTA GENERAL -->
-    <section class="slide" data-slide="1" aria-label="Vista general de arquitectura">
+    <!-- SLIDE 2 · PROBLEMÁTICA -->
+    <section class="slide" data-slide="1" aria-label="Problemática actual">
       <div class="slide__content">
-        <p class="eyebrow reveal">Arquitectura</p>
-        <h2 class="slide-title reveal d1">Vista General de la Arquitectura Inicial</h2>
-        <p class="slide-lead reveal d2">Flujo desacoplado cloud-native: cada capa opera de forma independiente con costos mínimos en fase temprana.</p>
+        <p class="eyebrow reveal">Diagnóstico</p>
+        <h2 class="slide-title reveal d1">Problemática Actual y objetivo</h2>
+        <p class="slide-lead reveal d2">Diagnóstico operativo y meta de transformación para Hoja de Parra Spitz.</p>
 
-        <div class="arch-flow reveal d3">
-          <div class="arch-flow__node arch-flow__node--actors tile">
-            <span class="arch-flow__icon">👥</span>
-            <strong>Clientes / Administradores</strong>
-            <small>Portal público y panel de ventas</small>
-          </div>
-          <div class="arch-flow__arrow">↓</div>
-          <div class="arch-flow__node arch-flow__node--edge tile">
-            <span class="arch-flow__icon">☁</span>
-            <strong>Cloudflare</strong>
-            <small>DNS · CDN · SSL · WAF</small>
-            <em class="tag tag--free">Free</em>
-          </div>
-          <div class="arch-flow__split">
-            <div class="arch-flow__branch">
-              <div class="arch-flow__arrow">↓</div>
-              <div class="arch-flow__node tile">
-                <strong>Frontend Web</strong>
-                <small>Astro + React</small>
-                <span class="tag">Vercel / Pages · $0</span>
-              </div>
-            </div>
-            <div class="arch-flow__branch">
-              <div class="arch-flow__arrow">↓</div>
-              <div class="arch-flow__node arch-flow__node--core tile">
-                <strong>Backend API</strong>
-                <small>NestJS · Corazón del negocio</small>
-                <span class="tag tag--accent">Railway</span>
-              </div>
-            </div>
-          </div>
-          <div class="arch-flow__arrow">↓</div>
-          <div class="arch-flow__node arch-flow__node--data tile">
-            <strong>PostgreSQL + pgvector</strong>
-            <small>Neon Tech · Datos relacionales + vectores IA</small>
-            <em class="tag tag--free">Free Tier</em>
-          </div>
+        <div class="pain-grid">
+          <article class="tile pain-card reveal d2">
+            <div class="pain-card__num">01</div>
+            <h3>Canales informales</h3>
+            <p>Coordinación comercial dispersa a través de medios fragmentados debido a la falta de un sistema tecnológico integrado.</p>
+          </article>
+          <article class="tile pain-card reveal d3">
+            <div class="pain-card__num">02</div>
+            <h3>Procesos manuales</h3>
+            <p>Alta vulnerabilidad operativa con pérdida de información crítica y errores frecuentes en el registro de pedidos de catering.</p>
+          </article>
+          <article class="tile pain-card reveal d3">
+            <div class="pain-card__num">03</div>
+            <h3>Lentitud de respuesta</h3>
+            <p>Incremento en los tiempos de atención y confirmación de solicitudes por falta de automatización.</p>
+          </article>
+          <article class="tile pain-card reveal d4">
+            <div class="pain-card__num">04.-Objetivo General</div>
+            <h3>Automatizar y centralizar</h3>
+            <p>Implementar un sistema web a la medida para gestionar pedidos en Hoja de Parra Spitz, optimizando la operación y mejorando la atención al cliente.</p>
+          </article>
         </div>
       </div>
       <footer class="slide__footer">02 / 13</footer>
     </section>
 
-    <!-- SLIDE 3 · PROBLEMÁTICA -->
-    <section class="slide" data-slide="2" aria-label="La problemática">
-      <div class="slide__content">
-        <p class="eyebrow reveal">Diagnóstico</p>
-        <h2 class="slide-title reveal d1">La Problemática</h2>
-        <p class="slide-lead reveal d2">Foco de dolor: por qué las arquitecturas tradicionales fallan en fases tempranas de MYPES y startups.</p>
-
-        <div class="pain-grid">
-          <article class="tile pain-card reveal d2">
-            <div class="pain-card__num">01</div>
-            <h3>Sobreingeniería Prematura</h3>
-            <p>Microservicios, Kubernetes y capas innecesarias antes de validar el producto. Complejidad que retrasa el Time-to-Market y consume presupuesto sin retorno.</p>
-          </article>
-          <article class="tile pain-card reveal d3">
-            <div class="pain-card__num">02</div>
-            <h3>Costos Fijos Elevados</h3>
-            <p>AWS, Azure y GCP exigen compromisos mensuales de $150–$250 USD incluso con tráfico mínimo. Instancias EC2, RDS y ALB ociosas desde el día uno.</p>
-          </article>
-          <article class="tile pain-card reveal d3">
-            <div class="pain-card__num">03</div>
-            <h3>Bases Vectoriales Aisladas</h3>
-            <p>Pinecone, Weaviate o Qdrant como servicios separados duplican costos y complejidad operativa para un chatbot que podría vivir en la misma base de datos.</p>
-          </article>
-          <article class="tile pain-card reveal d4">
-            <div class="pain-card__num">04</div>
-            <h3>Infraestructura Ociosa</h3>
-            <p>Servidores, balanceadores y bases siempre activas consumiendo recursos en fases donde el producto aún no genera ingresos. Desperdicio financiero crítico.</p>
-          </article>
-        </div>
-      </div>
-      <footer class="slide__footer">03 / 13</footer>
-    </section>
-
-    <!-- SLIDE 4 · CAMINO A LA SOLUCIÓN -->
-    <section class="slide" data-slide="3" aria-label="El camino a la solución">
+    <!-- SLIDE 3 · CAMINO A LA SOLUCIÓN -->
+    <section class="slide" data-slide="2" aria-label="El camino a la solución">
       <div class="slide__content">
         <p class="eyebrow reveal">Solución</p>
         <h2 class="slide-title reveal d1">El Camino a la Solución</h2>
-        <p class="slide-lead reveal d2">Web desacoplada con Astro + React: rendimiento máximo, costo de cómputo en cliente eliminado y seguridad por diseño.</p>
+        <p class="slide-lead reveal d2">Mediante la implementación de la plataforma web, logramos resolver cada una de las problemáticas de la empresa de manera directa.</p>
 
         <div class="solution-layout">
           <article class="tile solution-highlight reveal d2">
-            <h3>Astro + React: Separación Estática Total</h3>
-            <p>El frontend se compila a HTML estático en build time. Cero servidor Node en producción para la UI. Vercel/Pages entrega assets desde CDN global con latencia mínima.</p>
+            <h3>Catálogo y Reserva Sin Errores</h3>
+            <p>Para resolver la desorganización, transformamos el flujo disperso del negocio en un único canal digital formal y automático.</p>
             <ul class="check-list">
-              <li>Islands Architecture: React solo donde se necesita interactividad</li>
-              <li>Build estático = imposible atacar la base de datos desde el frontend</li>
-              <li>Entrega inmediata: deploy en segundos tras cada push</li>
+              <li>El cliente ahora puede ver de manera clara e interactiva la carta especializada de la empresa (los buffets árabe, criollo y parrillero).</li>
+              <li>El sistema calcula automáticamente el presupuesto exacto según la cantidad de invitados y las opciones seleccionadas, evitando confusiones o demoras por cálculos manuales.</li>
+              <li>El cliente obtiene autonomía total para estructurar su pedido y conocer el detalle de su solicitud de forma transparente, eliminando las coordinaciones imprecisas por mensajes de redes sociales.</li>
             </ul>
           </article>
           <div class="solution-features">
             <article class="tile feature-tile reveal d3">
               <span class="feature-tile__icon">🛡</span>
-              <h4>Inmunidad a Ataques Directos</h4>
-              <p>El frontend no expone credenciales ni conexiones DB. Toda lógica sensible vive en NestJS detrás de Cloudflare WAF.</p>
+              <h4>Transacciones Formales y Seguras</h4>
+              <p>Flujo de pago integrado que permite validar las reservas y registrar el cobro de manera directa, ofreciendo total trazabilidad y seguridad para el negocio y el cliente.</p>
             </article>
             <article class="tile feature-tile reveal d3">
               <span class="feature-tile__icon">⚡</span>
-              <h4>Rendimiento Optimizado</h4>
-              <p>Catálogo de buffets, landing y contenido estático se sirven sin JavaScript bloqueante. Core Web Vitals excelentes.</p>
+              <h4>Atención Inmediata 24/7</h4>
+              <p>Un Asistente Virtual (Chatbot IA) responde dudas frecuentes del menú, políticas del servicio y recomendaciones al instante, reduciendo la pérdida de clientes por demoras en responder.</p>
             </article>
             <article class="tile feature-tile reveal d4">
               <span class="feature-tile__icon">💰</span>
-              <h4>Costo de Cómputo $0</h4>
-              <p>Sin contenedores ni VMs para la interfaz. Solo el backend en Railway consume recursos de servidor.</p>
+              <h4>Centralización Operativa y Control de Ventas</h4>
+              <p>El equipo comercial recibe y procesa todas las solicitudes en una sola pantalla, aprobando o actualizando los estados de los pedidos de forma ordenada y centralizada.</p>
             </article>
             <article class="tile feature-tile reveal d4">
               <span class="feature-tile__icon">🔗</span>
               <h4>Componentes Clave</h4>
-              <p>Auth JWT/Google · Órdenes y reservas · Pagos Culqi · Chatbot IA con SSE · Storage R2 para imágenes.</p>
+              <p>Catálogo visual e interactivo · Formulario de reserva paso a paso · Panel de Control de Ventas · Agenda de Eventos Inteligente (coordinación sin cruces de fechas) · Chatbot de IA.</p>
             </article>
+          </div>
+        </div>
+      </div>
+      <footer class="slide__footer">03 / 13</footer>
+    </section>
+
+    <!-- SLIDE 4 · ARQUITECTURA EN LA NUBE -->
+    <section class="slide" data-slide="3" aria-label="Vista de arquitectura en la nube">
+      <div class="slide__content slide__content--wide">
+        <p class="eyebrow reveal">Topología</p>
+        <h2 class="slide-title reveal d1">Vista de Arquitectura en la Nube</h2>
+        <p class="slide-lead reveal d2">Flujo de red y datos desacoplado: cada capa escala de forma independiente con
+          costos mínimos en fase temprana.</p>
+
+        <div class="arch-topo reveal d3">
+          <div class="arch-topo__node arch-topo__node--actors tile">
+            <strong>CLIENTES / ADMINISTRADORES</strong>
+            <small>Portal público · Panel de ventas · Super Admin TI</small>
+          </div>
+          <div class="arch-topo__line"></div>
+          <div class="arch-topo__node arch-topo__node--cf tile">
+            <strong>Cloudflare</strong>
+            <small>DNS + CDN + SSL + WAF</small>
+            <span class="tag tag--free">Free</span>
+          </div>
+          <div class="arch-topo__fork"></div>
+          <div class="arch-topo__columns">
+            <div class="arch-topo__column">
+              <div class="arch-topo__node tile">
+                <strong>FRONTEND WEB</strong>
+                <small>Astro + React (Vercel / Pages)</small>
+                <em class="arch-topo__cost">Costo $0 — Solo interfaz UI</em>
+              </div>
+              <div class="arch-topo__line arch-topo__line--short"></div>
+              <div class="arch-topo__node arch-topo__node--culqi tile">
+                <strong>PAGOS</strong>
+                <small>Culqi (SDK/API)</small>
+              </div>
+            </div>
+            <div class="arch-topo__column arch-topo__column--wide">
+              <div class="arch-topo__node arch-topo__node--core tile">
+                <strong>BACKEND API</strong>
+                <small>NestJS (Railway)</small>
+                <em class="arch-topo__cost arch-topo__cost--accent">Corazón del Negocio</em>
+              </div>
+              <div class="arch-topo__modules">
+                <div class="arch-topo__node arch-topo__node--module tile">
+                  <strong>MÓDULOS DE NEGOCIO</strong>
+                  <small>Auth (JWT/Google) · Órdenes / Reservas · Pagos / Usuarios</small>
+                </div>
+                <div class="arch-topo__node arch-topo__node--module arch-topo__node--ai tile">
+                  <strong>MÓDULO DE IA</strong>
+                  <small>OpenRouter API · Laguna XS 2.1 (Free)</small>
+                  <small>Respuestas SSE en tiempo real</small>
+                </div>
+                <div class="arch-topo__node arch-topo__node--module arch-topo__node--r2 tile">
+                  <strong>STORAGE</strong>
+                  <small>Cloudflare R2 (Imágenes)</small>
+                  <span class="tag tag--free">Costo $0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="arch-topo__merge"></div>
+          <div class="arch-topo__node arch-topo__node--db tile">
+            <strong>BASE DE DATOS TODO-EN-UNO</strong>
+            <small>PostgreSQL (Neon Tech)</small>
+            <span class="arch-topo__db-detail">Tablas Relacionales (Negocio) · Extensión pgvector (Vectores IA)</span>
+            <span class="tag tag--free">Costo $0</span>
           </div>
         </div>
       </div>
@@ -184,7 +211,8 @@
               <span class="stack-card__tier">Frontend</span>
             </div>
             <h3>Astro + React</h3>
-            <p>Interfaz web con Islands Architecture. TypeScript, componentes reutilizables y navegación SPA donde se requiere.</p>
+            <p>Interfaz web con Islands Architecture. TypeScript, componentes reutilizables y navegación SPA donde se
+              requiere.</p>
             <span class="stack-card__host">Vercel / Cloudflare Pages</span>
           </article>
           <article class="tile stack-card reveal d2">
@@ -193,7 +221,8 @@
               <span class="stack-card__tier">Backend</span>
             </div>
             <h3>NestJS</h3>
-            <p>API REST modular: Auth, órdenes, reservas, pagos, usuarios. TypeORM, JWT, validación y buenas prácticas empresariales.</p>
+            <p>API REST modular: Auth, órdenes, reservas, pagos, usuarios. TypeORM, JWT, validación y buenas prácticas
+              empresariales.</p>
             <span class="stack-card__host">Railway</span>
           </article>
           <article class="tile stack-card reveal d3">
@@ -220,7 +249,8 @@
               <span class="stack-card__tier">Base de Datos</span>
             </div>
             <h3>Neon Tech</h3>
-            <p>PostgreSQL serverless con extensión pgvector. Tablas relacionales del negocio + vectores para memoria del chatbot IA.</p>
+            <p>PostgreSQL serverless con extensión pgvector. Tablas relacionales del negocio + vectores para memoria del
+              chatbot IA.</p>
             <span class="stack-card__host">500 MB Free · Siempre activo</span>
           </article>
           <article class="tile stack-card reveal d4">
@@ -229,7 +259,8 @@
               <span class="stack-card__tier">Inteligencia</span>
             </div>
             <h3>OpenRouter</h3>
-            <p>Gateway multi-modelo: Laguna XS 2.1 (free) para inicio. Respuestas vía Server-Sent Events (SSE) en tiempo real.</p>
+            <p>Gateway multi-modelo: Laguna XS 2.1 (free) para inicio. Respuestas vía Server-Sent Events (SSE) en tiempo
+              real.</p>
             <span class="stack-card__host">Sin vendor lock-in</span>
           </article>
         </div>
@@ -305,10 +336,14 @@
         </div>
 
         <div class="phase-legend reveal d4">
-          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:var(--accent)"></span>Fase 1 — Core &amp; DB</div>
-          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#5B8DEF"></span>Fase 2 — Negocio &amp; Pagos</div>
-          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#9B6BFF"></span>Fase 3 — IA</div>
-          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#4ADE80"></span>Fase 4 — Producción &amp; QA</div>
+          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:var(--accent)"></span>Fase 1
+            — Core &amp; DB</div>
+          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#5B8DEF"></span>Fase 2 —
+            Negocio &amp; Pagos</div>
+          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#9B6BFF"></span>Fase 3 — IA
+          </div>
+          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#4ADE80"></span>Fase 4 —
+            Producción &amp; QA</div>
         </div>
       </div>
       <footer class="slide__footer">06 / 13</footer>
@@ -388,7 +423,8 @@
       <div class="slide__content slide__content--wide">
         <p class="eyebrow reveal">Escalabilidad</p>
         <h2 class="slide-title reveal d1">Guía de Escalabilidad Financiera</h2>
-        <p class="slide-lead reveal d2">Qué ocurre al superar las capas gratuitas con tráfico real (10k – 50k visitas/mes).</p>
+        <p class="slide-lead reveal d2">Qué ocurre al superar las capas gratuitas con tráfico real (10k – 50k
+          visitas/mes).</p>
 
         <div class="tier-grid">
           <article class="tile tier-card reveal d2">
@@ -419,7 +455,8 @@
             <h3>OpenRouter — Migración de Modelos</h3>
             <p class="tier-card__trigger">Si Laguna XS 2.1 se congestiona o agota cuota gratuita</p>
             <p class="tier-card__price">$5 – $10 <small>/millón tokens</small></p>
-            <p>Migración transparente a Llama 3 8B o Deepseek V3. Sin cambios en código gracias al gateway OpenRouter. Cero vendor lock-in.</p>
+            <p>Migración transparente a Llama 3 8B o Deepseek V3. Sin cambios en código gracias al gateway OpenRouter.
+              Cero vendor lock-in.</p>
           </article>
         </div>
       </div>
@@ -461,13 +498,47 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>Frontend (Vercel)</td><td>Pro</td><td>$20.00</td><td>10k–50k visitas/mes</td></tr>
-              <tr><td>Backend (Railway)</td><td>Developer 1GB</td><td>$7 – $15</td><td>NestJS siempre activo</td></tr>
-              <tr><td>Base de Datos (Neon)</td><td>Launch</td><td>$19.00</td><td>10 GB, backups, sin cold start</td></tr>
-              <tr><td>CDN + WAF (Cloudflare)</td><td>Free / Pro</td><td>$0 – $20</td><td>Free suficiente en mayoría de casos</td></tr>
-              <tr><td>Storage R2</td><td>Pay-as-you-go</td><td>$0 – $2</td><td>~$0.015/GB extra</td></tr>
-              <tr><td>IA (OpenRouter)</td><td>Llama 3 / Deepseek</td><td>$5 – $10</td><td>Según volumen de consultas</td></tr>
-              <tr class="row-total"><td colspan="2"><strong>Total Proyectado</strong></td><td><strong>$35 – $65</strong></td><td>vs $150–$250 tradicional</td></tr>
+              <tr>
+                <td>Frontend (Vercel)</td>
+                <td>Pro</td>
+                <td>$20.00</td>
+                <td>10k–50k visitas/mes</td>
+              </tr>
+              <tr>
+                <td>Backend (Railway)</td>
+                <td>Developer 1GB</td>
+                <td>$7 – $15</td>
+                <td>NestJS siempre activo</td>
+              </tr>
+              <tr>
+                <td>Base de Datos (Neon)</td>
+                <td>Launch</td>
+                <td>$19.00</td>
+                <td>10 GB, backups, sin cold start</td>
+              </tr>
+              <tr>
+                <td>CDN + WAF (Cloudflare)</td>
+                <td>Free / Pro</td>
+                <td>$0 – $20</td>
+                <td>Free suficiente en mayoría de casos</td>
+              </tr>
+              <tr>
+                <td>Storage R2</td>
+                <td>Pay-as-you-go</td>
+                <td>$0 – $2</td>
+                <td>~$0.015/GB extra</td>
+              </tr>
+              <tr>
+                <td>IA (OpenRouter)</td>
+                <td>Llama 3 / Deepseek</td>
+                <td>$5 – $10</td>
+                <td>Según volumen de consultas</td>
+              </tr>
+              <tr class="row-total">
+                <td colspan="2"><strong>Total Proyectado</strong></td>
+                <td><strong>$35 – $65</strong></td>
+                <td>vs $150–$250 tradicional</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -480,7 +551,8 @@
       <div class="slide__content">
         <p class="eyebrow reveal">Operaciones</p>
         <h2 class="slide-title reveal d1">Mantenimiento Técnico y Costos Operativos</h2>
-        <p class="slide-lead reveal d2">Necesidades de soporte preventivo y correctivo para mantener la plataforma saludable.</p>
+        <p class="slide-lead reveal d2">Necesidades de soporte preventivo y correctivo para mantener la plataforma
+          saludable.</p>
 
         <div class="ops-grid">
           <article class="tile ops-card reveal d2">
@@ -536,28 +608,33 @@
       <div class="slide__content">
         <p class="eyebrow reveal">Estrategia</p>
         <h2 class="slide-title reveal d1">Valor de Negocio y Beneficios Operativos</h2>
-        <p class="slide-lead reveal d2">Pilares estratégicos que justifican la inversión ante la junta directiva de Hoja de Parra Spitz.</p>
+        <p class="slide-lead reveal d2">Pilares estratégicos que justifican la inversión ante la junta directiva de Hoja
+          de Parra Spitz.</p>
 
         <div class="pillar-grid">
           <article class="tile pillar-card reveal d2">
             <div class="pillar-card__icon">📉</div>
             <h3>Reducción del Riesgo Financiero</h3>
-            <p>Inversión inicial de $3–5 USD/mes vs. $150–250 en nubes tradicionales. El negocio valida el producto sin comprometer capital operativo en infraestructura ociosa.</p>
+            <p>Inversión inicial de $3–5 USD/mes vs. $150–250 en nubes tradicionales. El negocio valida el producto sin
+              comprometer capital operativo en infraestructura ociosa.</p>
           </article>
           <article class="tile pillar-card reveal d3">
             <div class="pillar-card__icon">🚀</div>
             <h3>Agilidad en Time-to-Market</h3>
-            <p>Deploy en minutos, no semanas. Astro compila estático, Railway despliega desde Git. La empresa de catering puede atender pedidos digitales en semanas, no meses.</p>
+            <p>Deploy en minutos, no semanas. Astro compila estático, Railway despliega desde Git. La empresa de
+              catering puede atender pedidos digitales en semanas, no meses.</p>
           </article>
           <article class="tile pillar-card reveal d3">
             <div class="pillar-card__icon">🔓</div>
             <h3>Cero Vendor Lock-in</h3>
-            <p>OpenRouter permite cambiar modelos IA sin reescribir código. PostgreSQL estándar migra a cualquier host. Docker en Railway es portable a Fly.io, Render o VPS propio.</p>
+            <p>OpenRouter permite cambiar modelos IA sin reescribir código. PostgreSQL estándar migra a cualquier host.
+              Docker en Railway es portable a Fly.io, Render o VPS propio.</p>
           </article>
           <article class="tile pillar-card reveal d4">
             <div class="pillar-card__icon">📊</div>
             <h3>Predictibilidad de Costos</h3>
-            <p>Cada componente tiene pricing público y lineal. La junta directiva recibe proyecciones claras: $3–5 inicial, $35–65 en producción. Sin facturas sorpresa de AWS.</p>
+            <p>Cada componente tiene pricing público y lineal. La junta directiva recibe proyecciones claras: $3–5
+              inicial, $35–65 en producción. Sin facturas sorpresa de AWS.</p>
           </article>
         </div>
       </div>
@@ -579,11 +656,15 @@
             </div>
             <h3>Procesamiento de Pago de Pedido</h3>
             <ol class="flow-steps">
-              <li><span>1</span> Cliente selecciona buffet y completa formulario de evento (fecha, invitados, platos).</li>
-              <li><span>2</span> Frontend Astro envía solicitud a <code>POST /api/orders</code> en NestJS (Railway).</li>
+              <li><span>1</span> Cliente selecciona buffet y completa formulario de evento (fecha, invitados, platos).
+              </li>
+              <li><span>2</span> Frontend Astro envía solicitud a <code>POST /api/orders</code> en NestJS (Railway).
+              </li>
               <li><span>3</span> Backend crea orden en PostgreSQL (Neon) con estado <em>Pendiente</em>.</li>
-              <li><span>4</span> Culqi SDK tokeniza tarjeta en el cliente — datos sensibles nunca tocan nuestro servidor.</li>
-              <li><span>5</span> NestJS confirma cargo vía API Culqi, actualiza estado a <em>Aprobado</em> y notifica al admin.</li>
+              <li><span>4</span> Culqi SDK tokeniza tarjeta en el cliente — datos sensibles nunca tocan nuestro
+                servidor.</li>
+              <li><span>5</span> NestJS confirma cargo vía API Culqi, actualiza estado a <em>Aprobado</em> y notifica al
+                admin.</li>
             </ol>
           </article>
 
@@ -594,11 +675,13 @@
             </div>
             <h3>Consulta al Chatbot de Recomendaciones</h3>
             <ol class="flow-steps">
-              <li><span>1</span> Cliente abre chatbot en portal público: <em>"¿Qué buffet recomiendan para 80 personas?"</em></li>
+              <li><span>1</span> Cliente abre chatbot en portal público: <em>"¿Qué buffet recomiendan para 80
+                  personas?"</em></li>
               <li><span>2</span> Frontend abre conexión SSE a <code>GET /api/ai/chat</code> en NestJS.</li>
               <li><span>3</span> Backend recupera contexto relevante vía pgvector (embeddings de carta y FAQs).</li>
               <li><span>4</span> NestJS envía prompt enriquecido a OpenRouter (Laguna XS 2.1 o Llama 3 8B).</li>
-              <li><span>5</span> Respuesta se transmite token a token vía SSE — el usuario ve texto en tiempo real sin esperar respuesta completa.</li>
+              <li><span>5</span> Respuesta se transmite token a token vía SSE — el usuario ve texto en tiempo real sin
+                esperar respuesta completa.</li>
             </ol>
           </article>
         </div>
@@ -614,19 +697,22 @@
         <div class="closing-grid reveal d2">
           <article class="closing-item">
             <h3>Viabilidad Técnica</h3>
-            <p>Astro + NestJS + PostgreSQL/pgvector + OpenRouter conforman un stack moderno, probado y modular. Cada capa escala de forma independiente sin reescribir la arquitectura.</p>
+            <p>Astro + NestJS + PostgreSQL/pgvector + OpenRouter conforman un stack moderno, probado y modular. Cada
+              capa escala de forma independiente sin reescribir la arquitectura.</p>
           </article>
           <article class="closing-item">
             <h3>Viabilidad Económica</h3>
-            <p>De $3–5 USD/mes en validación a $35–65 USD/mes en producción real. Un ahorro del 60–75% frente a infraestructuras cloud tradicionales con costos fijos de $150–250.</p>
+            <p>De $3–5 USD/mes en validación a $35–65 USD/mes en producción real. Un ahorro del 60–75% frente a
+              infraestructuras cloud tradicionales con costos fijos de $150–250.</p>
           </article>
           <article class="closing-item">
             <h3>Impacto en el Negocio</h3>
-            <p>Hoja de Parra Spitz centraliza pedidos, automatiza atención con IA, procesa pagos seguros y obtiene reportes en tiempo real — todo con inversión infraestructural mínima y predecible.</p>
+            <p>Hoja de Parra Spitz centraliza pedidos, automatiza atención con IA, procesa pagos seguros y obtiene
+              reportes en tiempo real — todo con inversión infraestructural mínima y predecible.</p>
           </article>
         </div>
         <div class="closing-cta reveal d3">
-          <span class="closing-cta__brand">Arquitectura Lean Enterprise 2026</span>
+          <span class="closing-cta__brand">De Parra Spitz catering & eventos</span>
           <span class="closing-cta__sub">De Parra Spitz · Escalable · Inteligente · Eficiente</span>
         </div>
       </div>
@@ -637,13 +723,18 @@
 
   <nav class="deck-controls" aria-label="Controles de presentación">
     <button class="deck-controls__btn" id="prevBtn" aria-label="Diapositiva anterior" disabled>
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
     </button>
     <button class="deck-controls__btn" id="nextBtn" aria-label="Siguiente diapositiva">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
     </button>
   </nav>
 
   <script src="app.js"></script>
 </body>
+
 </html>
