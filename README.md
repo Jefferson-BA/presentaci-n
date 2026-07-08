@@ -1,39 +1,41 @@
-# De Parra Spitz — Project Deck Web
+# Arquitectura Lean Enterprise 2026 — Slide Deck
 
-Presentación web interactiva estilo PowerPoint para el proyecto de catering **Hoja de Parra Spitz**.
+Presentación web ejecutiva para **De Parra Spitz / Hoja de Parra Spitz**.
 
-## Contenido (12 diapositivas)
+## Diapositivas (13)
 
-1. Portada — Catering & Eventos
-2. Equipo de desarrollo
-3. Problemática, Objetivos y Alcance
-4. Requerimientos funcionales (RF-01 a RF-10)
-5. Diagrama de Gantt y Cronograma (S8–S15)
-6. Arquitectura de despliegue cloud-native
-7. Stack tecnológico
-8. Modelo empresarial y KPIs
-9. Casos de uso y épicas
-10. Modelo DER
-11. Diagrama de Ishikawa
-12. Conclusiones y recomendaciones
+1. Portada Ejecutiva
+2. Vista General de Arquitectura
+3. La Problemática
+4. El Camino a la Solución
+5. Stack Tecnológico Completo
+6. Cronograma y Gantt
+7. Análisis de Costos — Fase Inicial
+8. Guía de Escalabilidad Financiera
+9. Proyección de Costos en Producción
+10. Mantenimiento Técnico y Costos Operativos
+11. Valor de Negocio y Beneficios Operativos
+12. Casos de Uso Prácticos
+13. Conclusiones
 
-## Cómo abrir
-
-Abre `index.html` en tu navegador, o ejecuta un servidor local:
+## Abrir
 
 ```bash
+# Opción 1: abrir directamente
+start index.html
+
+# Opción 2: servidor local
 npx serve .
 ```
 
 ## Navegación
 
-- **Flechas** ← → o teclado (↑ ↓)
-- **Espacio** — siguiente diapositiva
-- **Scroll del mouse** — avanzar/retroceder
-- **Swipe** — en dispositivos táctiles
-- **Puntos laterales** — ir a una diapositiva específica
+- Flechas del teclado (← → ↑ ↓)
+- Espacio para avanzar
+- Scroll del mouse
+- Swipe en móvil
+- Puntos en barra lateral izquierda
 
 ## Diseño
 
-Paleta beige y negro minimalista, tipografía Cormorant Garamond + DM Sans, animaciones de entrada por diapositiva.
-"# presentaci-n" 
+Paleta oscura ejecutiva: `#0A0A0A` base, superficies `#161616`/`#1E1E1E`, acento oro `#C9974A`, tipografía Playfair Display + Inter.

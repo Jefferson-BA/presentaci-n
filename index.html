@@ -3,511 +3,646 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>De Parra Spitz — Project Deck</title>
+  <title>Arquitectura Lean Enterprise 2026 — De Parra Spitz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="progress-bar" id="progressBar"></div>
 
-  <nav class="nav-dots" id="navDots" aria-label="Navegación de diapositivas"></nav>
+  <header class="deck-header">
+    <div class="deck-brand">
+      <span class="brand-dot"></span>
+      <span>De Parra Spitz</span>
+    </div>
+    <div class="deck-meta">
+      <span id="slideIndicator">1 / 13</span>
+    </div>
+  </header>
 
-  <div class="presentation" id="presentation">
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-valuemin="1" aria-valuemax="13" aria-valuenow="1"></div>
 
-    <!-- SLIDE 1: PORTADA -->
-    <section class="slide slide-cover active" data-slide="0">
-      <div class="slide-inner">
-        <div class="cover-accent"></div>
-        <p class="eyebrow animate-in">Proyecto empresarial</p>
-        <h1 class="cover-title animate-in delay-1">
-          <span class="thin">Catering &amp;</span>
-          <span class="bold">Eventos</span>
-        </h1>
-        <div class="cover-divider animate-in delay-2"></div>
-        <h2 class="cover-subtitle animate-in delay-2">De Parra Spitz</h2>
-        <p class="cover-desc animate-in delay-3">
-          Desarrollo de un sistema web para la gestión de reservas en la empresa de catering
-          <strong>Hoja de Parra Spitz</strong>
-        </p>
-        <div class="cover-brand animate-in delay-4">
-          <span class="brand-mark">DE PARRA</span>
-          <span class="brand-mark accent">SPITZ</span>
+  <nav class="nav-rail" id="navRail" aria-label="Navegación de diapositivas"></nav>
+
+  <main class="deck" id="deck">
+
+    <!-- SLIDE 1 · PORTADA EJECUTIVA -->
+    <section class="slide slide--cover active" data-slide="0" aria-label="Portada ejecutiva">
+      <div class="slide__content slide__content--center">
+        <p class="eyebrow reveal">De Parra Spitz · Hoja de Parra Spitz</p>
+        <h1 class="hero-title reveal d1">Arquitectura Lean<br>Enterprise 2026</h1>
+        <div class="hero-rule reveal d2"></div>
+        <p class="hero-subtitle reveal d2">Escalabilidad e Inteligencia Artificial con Eficiencia de Costos</p>
+        <div class="hero-badges reveal d3">
+          <span class="badge">Cloud Native</span>
+          <span class="badge badge--accent">IA Conversacional</span>
+          <span class="badge">Costo $0 Inicial</span>
         </div>
+        <p class="hero-footnote reveal d4">Sistema web para gestión de reservas y pedidos en catering</p>
       </div>
-      <div class="slide-number">01 / 12</div>
+      <footer class="slide__footer">01 / 13</footer>
     </section>
 
-    <!-- SLIDE 2: EQUIPO -->
-    <section class="slide" data-slide="1">
-      <div class="slide-inner">
-        <p class="eyebrow animate-in">Team</p>
-        <h2 class="slide-title animate-in delay-1">Equipo de Desarrollo</h2>
-        <p class="slide-subtitle animate-in delay-2">Contained by</p>
-        <div class="team-grid">
-          <article class="team-card animate-in delay-3">
-            <div class="team-avatar">JB</div>
-            <h3>Jeferson Bautista</h3>
-            <p class="team-role">Aporte de Desarrollo</p>
-            <span class="team-badge">Fullstack &amp; IA</span>
-          </article>
-          <article class="team-card animate-in delay-4">
-            <div class="team-avatar">EC</div>
-            <h3>Elias Salomon Cardenas Cuellar</h3>
-            <p class="team-role">Aporte de Desarrollo</p>
-            <span class="team-badge">Fullstack &amp; IA</span>
-          </article>
-        </div>
-      </div>
-      <div class="slide-number">02 / 12</div>
-    </section>
+    <!-- SLIDE 2 · VISTA GENERAL -->
+    <section class="slide" data-slide="1" aria-label="Vista general de arquitectura">
+      <div class="slide__content">
+        <p class="eyebrow reveal">Arquitectura</p>
+        <h2 class="slide-title reveal d1">Vista General de la Arquitectura Inicial</h2>
+        <p class="slide-lead reveal d2">Flujo desacoplado cloud-native: cada capa opera de forma independiente con costos mínimos en fase temprana.</p>
 
-    <!-- SLIDE 3: PROBLEMÁTICA -->
-    <section class="slide" data-slide="2">
-      <div class="slide-inner">
-        <p class="eyebrow animate-in">Contexto</p>
-        <h2 class="slide-title animate-in delay-1">Problemática, Objetivos y Alcance</h2>
-        <div class="three-col">
-          <article class="info-card animate-in delay-2">
-            <h3>Problemática</h3>
-            <p>Las MYPES de catering, como <strong>Hoja de Parra Spitz</strong>, enfrentan dificultades operativas por la ausencia de un sistema tecnológico integrado. La gestión dispersa en canales informales genera pérdida de información, errores manuales y mayores tiempos de respuesta.</p>
-          </article>
-          <article class="info-card highlight animate-in delay-3">
-            <h3>Objetivos</h3>
-            <p>Diseñar e implementar un sistema web a la medida para la gestión y automatización de pedidos, optimizando procesos operativos, centralizando la información comercial y mejorando la eficiencia en la atención al cliente.</p>
-          </article>
-          <article class="info-card animate-in delay-4">
-            <h3>Alcance</h3>
-            <ul>
-              <li>Módulo de gestión de clientes (frontend público)</li>
-              <li>Panel de administración de ventas y pedidos</li>
-              <li>Mantenimiento de información y contenido (CRUD)</li>
-              <li>Reportes básicos de seguimiento del negocio</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-      <div class="slide-number">03 / 12</div>
-    </section>
-
-    <!-- SLIDE 4: REQUERIMIENTOS -->
-    <section class="slide" data-slide="3">
-      <div class="slide-inner">
-        <p class="eyebrow animate-in">Especificaciones</p>
-        <h2 class="slide-title animate-in delay-1">Requerimientos Funcionales Principales</h2>
-        <div class="req-grid">
-          <div class="req-module animate-in delay-2">
-            <h3>Módulo del Cliente <span>(Portal Público)</span></h3>
-            <ul>
-              <li><strong>RF-01</strong> Autenticación: registro e inicio de sesión seguro</li>
-              <li><strong>RF-02</strong> Catálogo interactivo: buffets árabe, parrillero, criollo</li>
-              <li><strong>RF-03</strong> Solicitud de pedidos: cotización con fecha, invitados y platos</li>
-              <li><strong>RF-04</strong> Trazabilidad: estado en tiempo real (Pendiente / Aprobado)</li>
-            </ul>
+        <div class="arch-flow reveal d3">
+          <div class="arch-flow__node arch-flow__node--actors tile">
+            <span class="arch-flow__icon">👥</span>
+            <strong>Clientes / Administradores</strong>
+            <small>Portal público y panel de ventas</small>
           </div>
-          <div class="req-module animate-in delay-3">
-            <h3>Módulo de Administración <span>(Panel de Ventas)</span></h3>
-            <ul>
-              <li><strong>RF-05</strong> Gestión de pedidos: aprobación y actualización de estados</li>
-              <li><strong>RF-06</strong> Mantenedor de carta (CRUD): platos, buffets y precios</li>
-              <li><strong>RF-07</strong> Agenda de eventos: calendario anti-cruce de fechas</li>
-              <li><strong>RF-08</strong> Reportes y KPIs: ventas, pedidos y alta demanda</li>
-            </ul>
-          </div>
-          <div class="req-module animate-in delay-4">
-            <h3>Super Administrador <span>(Soporte TI)</span></h3>
-            <ul>
-              <li><strong>RF-09</strong> Control de accesos: roles y permisos</li>
-              <li><strong>RF-10</strong> Mantenimiento de datos: control y auditoría PostgreSQL</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="slide-number">04 / 12</div>
-    </section>
-
-    <!-- SLIDE 5: GANTT -->
-    <section class="slide" data-slide="4">
-      <div class="slide-inner slide-wide">
-        <p class="eyebrow animate-in">Planificación</p>
-        <h2 class="slide-title animate-in delay-1">Diagrama de Gantt y Cronograma</h2>
-        <p class="slide-subtitle animate-in delay-2">Sprints S8 – S15 · Mayo – Julio 2026</p>
-
-        <div class="gantt-wrapper animate-in delay-3">
-          <div class="gantt-header">
-            <span class="gantt-label-col">Actividad</span>
-            <div class="gantt-weeks">
-              <span>S8<br><small>07-13 May</small></span>
-              <span>S9<br><small>14-20 May</small></span>
-              <span>S10<br><small>21-27 May</small></span>
-              <span>S11<br><small>28 May-04 Jun</small></span>
-              <span>S12<br><small>05-11 Jun</small></span>
-              <span>S13<br><small>12-18 Jun</small></span>
-              <span>S14<br><small>19-25 Jun</small></span>
-              <span>S15<br><small>26 Jun-07 Jul</small></span>
-            </div>
-          </div>
-
-          <div class="gantt-row" data-progress="100">
-            <span class="gantt-task">Diseño en Figma Maker</span>
-            <div class="gantt-bars"><div class="gantt-bar" style="--start:0;--span:1;--progress:100"></div></div>
-            <span class="gantt-pct">100%</span>
-          </div>
-          <div class="gantt-row" data-progress="100">
-            <span class="gantt-task">Skills Utilizables</span>
-            <div class="gantt-bars"><div class="gantt-bar" style="--start:1;--span:1;--progress:100"></div></div>
-            <span class="gantt-pct">100%</span>
-          </div>
-          <div class="gantt-row" data-progress="100">
-            <span class="gantt-task">Diseño del Sistema</span>
-            <div class="gantt-bars"><div class="gantt-bar" style="--start:2;--span:1;--progress:100"></div></div>
-            <span class="gantt-pct">100%</span>
-          </div>
-          <div class="gantt-row" data-progress="100">
-            <span class="gantt-task">Diseño de la Base de Datos</span>
-            <div class="gantt-bars"><div class="gantt-bar" style="--start:3;--span:1;--progress:100"></div></div>
-            <span class="gantt-pct">100%</span>
-          </div>
-          <div class="gantt-row" data-progress="80">
-            <span class="gantt-task">Frontend / Backend</span>
-            <div class="gantt-bars"><div class="gantt-bar" style="--start:4;--span:1;--progress:80"></div></div>
-            <span class="gantt-pct">80%</span>
-          </div>
-          <div class="gantt-row" data-progress="60">
-            <span class="gantt-task">Integración del Sistema</span>
-            <div class="gantt-bars"><div class="gantt-bar partial" style="--start:5;--span:1;--progress:60"></div></div>
-            <span class="gantt-pct">60%</span>
-          </div>
-          <div class="gantt-row" data-progress="70">
-            <span class="gantt-task">Pruebas y Ajustes</span>
-            <div class="gantt-bars"><div class="gantt-bar partial" style="--start:6;--span:1;--progress:70"></div></div>
-            <span class="gantt-pct">70%</span>
-          </div>
-          <div class="gantt-row" data-progress="60">
-            <span class="gantt-task">Documentación Final (3er cap.)</span>
-            <div class="gantt-bars"><div class="gantt-bar partial" style="--start:7;--span:1;--progress:60"></div></div>
-            <span class="gantt-pct">60%</span>
-          </div>
-        </div>
-
-        <div class="cronograma-timeline animate-in delay-4">
-          <div class="timeline-item"><span class="tl-phase">Fase 1</span><span>Diseño UX/UI y arquitectura</span><span class="tl-date">May S8–S11</span></div>
-          <div class="timeline-item"><span class="tl-phase">Fase 2</span><span>Desarrollo Fullstack</span><span class="tl-date">Jun S12–S13</span></div>
-          <div class="timeline-item"><span class="tl-phase">Fase 3</span><span>QA, integración y documentación</span><span class="tl-date">Jun–Jul S14–S15</span></div>
-        </div>
-      </div>
-      <div class="slide-number">05 / 12</div>
-    </section>
-
-    <!-- SLIDE 6: ARQUITECTURA -->
-    <section class="slide" data-slide="5">
-      <div class="slide-inner slide-wide">
-        <p class="eyebrow animate-in">Infraestructura</p>
-        <h2 class="slide-title animate-in delay-1">Diagrama de Arquitectura de Despliegue</h2>
-        <p class="slide-subtitle animate-in delay-2">Componentes principales de la plataforma De Parra Spitz</p>
-
-        <div class="arch-diagram animate-in delay-3">
-          <div class="arch-node arch-users">
-            <span>👥 CLIENTES / ADMINISTRADORES</span>
-          </div>
-          <div class="arch-connector"></div>
-          <div class="arch-node arch-cloudflare">
-            <span class="arch-icon">☁</span>
+          <div class="arch-flow__arrow">↓</div>
+          <div class="arch-flow__node arch-flow__node--edge tile">
+            <span class="arch-flow__icon">☁</span>
             <strong>Cloudflare</strong>
-            <small>DNS + CDN + SSL + WAF · Free</small>
+            <small>DNS · CDN · SSL · WAF</small>
+            <em class="tag tag--free">Free</em>
           </div>
-          <div class="arch-split">
-            <div class="arch-branch">
-              <div class="arch-connector-h"></div>
-              <div class="arch-node arch-frontend">
-                <strong>FRONTEND WEB</strong>
-                <small>Astro + React (Vercel / Pages)</small>
-                <em>Costo $0 — Solo interfaz UI</em>
-              </div>
-              <div class="arch-connector"></div>
-              <div class="arch-node arch-pagos">
-                <strong>PAGOS</strong>
-                <small>Culqi (SDK/API)</small>
+          <div class="arch-flow__split">
+            <div class="arch-flow__branch">
+              <div class="arch-flow__arrow">↓</div>
+              <div class="arch-flow__node tile">
+                <strong>Frontend Web</strong>
+                <small>Astro + React</small>
+                <span class="tag">Vercel / Pages · $0</span>
               </div>
             </div>
-            <div class="arch-branch">
-              <div class="arch-connector-h"></div>
-              <div class="arch-node arch-backend">
-                <strong>BACKEND API</strong>
-                <small>NestJS (Railway)</small>
-                <em>Corazón del Negocio</em>
-              </div>
-              <div class="arch-modules">
-                <div class="arch-node arch-module">
-                  <strong>MÓDULOS DE NEGOCIO</strong>
-                  <small>Auth (JWT/Google) · Órdenes/Reservas · Pagos/Usuarios</small>
-                </div>
-                <div class="arch-node arch-module ai">
-                  <strong>MÓDULO DE IA</strong>
-                  <small>OpenRouter API · Laguna XS 2.1 (Free) · Respuestas SSE</small>
-                </div>
-                <div class="arch-node arch-module storage">
-                  <strong>STORAGE</strong>
-                  <small>Cloudflare R2 (Imágenes) · Costo $0</small>
-                </div>
+            <div class="arch-flow__branch">
+              <div class="arch-flow__arrow">↓</div>
+              <div class="arch-flow__node arch-flow__node--core tile">
+                <strong>Backend API</strong>
+                <small>NestJS · Corazón del negocio</small>
+                <span class="tag tag--accent">Railway</span>
               </div>
             </div>
           </div>
-          <div class="arch-connector"></div>
-          <div class="arch-node arch-db">
-            <strong>BASE DE DATOS TODO-EN-UNO</strong>
-            <small>PostgreSQL (Neon Tech)</small>
-            <span>Tablas Relacionales (Negocio) · Extensión pgvector (Vectores IA)</span>
-            <em>Costo $0</em>
+          <div class="arch-flow__arrow">↓</div>
+          <div class="arch-flow__node arch-flow__node--data tile">
+            <strong>PostgreSQL + pgvector</strong>
+            <small>Neon Tech · Datos relacionales + vectores IA</small>
+            <em class="tag tag--free">Free Tier</em>
           </div>
         </div>
       </div>
-      <div class="slide-number">06 / 12</div>
+      <footer class="slide__footer">02 / 13</footer>
     </section>
 
-    <!-- SLIDE 7: STACK -->
-    <section class="slide" data-slide="6">
-      <div class="slide-inner slide-wide">
-        <p class="eyebrow animate-in">Tecnología</p>
-        <h2 class="slide-title animate-in delay-1">Stack Tecnológico</h2>
-        <p class="slide-subtitle animate-in delay-2">Selección tecnológica alineada a la propuesta de solución</p>
+    <!-- SLIDE 3 · PROBLEMÁTICA -->
+    <section class="slide" data-slide="2" aria-label="La problemática">
+      <div class="slide__content">
+        <p class="eyebrow reveal">Diagnóstico</p>
+        <h2 class="slide-title reveal d1">La Problemática</h2>
+        <p class="slide-lead reveal d2">Foco de dolor: por qué las arquitecturas tradicionales fallan en fases tempranas de MYPES y startups.</p>
 
-        <div class="stack-table-wrap animate-in delay-3">
-          <table class="stack-table">
+        <div class="pain-grid">
+          <article class="tile pain-card reveal d2">
+            <div class="pain-card__num">01</div>
+            <h3>Sobreingeniería Prematura</h3>
+            <p>Microservicios, Kubernetes y capas innecesarias antes de validar el producto. Complejidad que retrasa el Time-to-Market y consume presupuesto sin retorno.</p>
+          </article>
+          <article class="tile pain-card reveal d3">
+            <div class="pain-card__num">02</div>
+            <h3>Costos Fijos Elevados</h3>
+            <p>AWS, Azure y GCP exigen compromisos mensuales de $150–$250 USD incluso con tráfico mínimo. Instancias EC2, RDS y ALB ociosas desde el día uno.</p>
+          </article>
+          <article class="tile pain-card reveal d3">
+            <div class="pain-card__num">03</div>
+            <h3>Bases Vectoriales Aisladas</h3>
+            <p>Pinecone, Weaviate o Qdrant como servicios separados duplican costos y complejidad operativa para un chatbot que podría vivir en la misma base de datos.</p>
+          </article>
+          <article class="tile pain-card reveal d4">
+            <div class="pain-card__num">04</div>
+            <h3>Infraestructura Ociosa</h3>
+            <p>Servidores, balanceadores y bases siempre activas consumiendo recursos en fases donde el producto aún no genera ingresos. Desperdicio financiero crítico.</p>
+          </article>
+        </div>
+      </div>
+      <footer class="slide__footer">03 / 13</footer>
+    </section>
+
+    <!-- SLIDE 4 · CAMINO A LA SOLUCIÓN -->
+    <section class="slide" data-slide="3" aria-label="El camino a la solución">
+      <div class="slide__content">
+        <p class="eyebrow reveal">Solución</p>
+        <h2 class="slide-title reveal d1">El Camino a la Solución</h2>
+        <p class="slide-lead reveal d2">Web desacoplada con Astro + React: rendimiento máximo, costo de cómputo en cliente eliminado y seguridad por diseño.</p>
+
+        <div class="solution-layout">
+          <article class="tile solution-highlight reveal d2">
+            <h3>Astro + React: Separación Estática Total</h3>
+            <p>El frontend se compila a HTML estático en build time. Cero servidor Node en producción para la UI. Vercel/Pages entrega assets desde CDN global con latencia mínima.</p>
+            <ul class="check-list">
+              <li>Islands Architecture: React solo donde se necesita interactividad</li>
+              <li>Build estático = imposible atacar la base de datos desde el frontend</li>
+              <li>Entrega inmediata: deploy en segundos tras cada push</li>
+            </ul>
+          </article>
+          <div class="solution-features">
+            <article class="tile feature-tile reveal d3">
+              <span class="feature-tile__icon">🛡</span>
+              <h4>Inmunidad a Ataques Directos</h4>
+              <p>El frontend no expone credenciales ni conexiones DB. Toda lógica sensible vive en NestJS detrás de Cloudflare WAF.</p>
+            </article>
+            <article class="tile feature-tile reveal d3">
+              <span class="feature-tile__icon">⚡</span>
+              <h4>Rendimiento Optimizado</h4>
+              <p>Catálogo de buffets, landing y contenido estático se sirven sin JavaScript bloqueante. Core Web Vitals excelentes.</p>
+            </article>
+            <article class="tile feature-tile reveal d4">
+              <span class="feature-tile__icon">💰</span>
+              <h4>Costo de Cómputo $0</h4>
+              <p>Sin contenedores ni VMs para la interfaz. Solo el backend en Railway consume recursos de servidor.</p>
+            </article>
+            <article class="tile feature-tile reveal d4">
+              <span class="feature-tile__icon">🔗</span>
+              <h4>Componentes Clave</h4>
+              <p>Auth JWT/Google · Órdenes y reservas · Pagos Culqi · Chatbot IA con SSE · Storage R2 para imágenes.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <footer class="slide__footer">04 / 13</footer>
+    </section>
+
+    <!-- SLIDE 5 · STACK TECNOLÓGICO -->
+    <section class="slide" data-slide="4" aria-label="Stack tecnológico completo">
+      <div class="slide__content slide__content--wide">
+        <p class="eyebrow reveal">Ecosistema</p>
+        <h2 class="slide-title reveal d1">Stack Tecnológico Completo</h2>
+        <p class="slide-lead reveal d2">Desglose técnico del ecosistema seleccionado para De Parra Spitz.</p>
+
+        <div class="stack-grid">
+          <article class="tile stack-card reveal d2">
+            <div class="stack-card__header">
+              <span class="stack-card__logo">A+R</span>
+              <span class="stack-card__tier">Frontend</span>
+            </div>
+            <h3>Astro + React</h3>
+            <p>Interfaz web con Islands Architecture. TypeScript, componentes reutilizables y navegación SPA donde se requiere.</p>
+            <span class="stack-card__host">Vercel / Cloudflare Pages</span>
+          </article>
+          <article class="tile stack-card reveal d2">
+            <div class="stack-card__header">
+              <span class="stack-card__logo">NJS</span>
+              <span class="stack-card__tier">Backend</span>
+            </div>
+            <h3>NestJS</h3>
+            <p>API REST modular: Auth, órdenes, reservas, pagos, usuarios. TypeORM, JWT, validación y buenas prácticas empresariales.</p>
+            <span class="stack-card__host">Railway</span>
+          </article>
+          <article class="tile stack-card reveal d3">
+            <div class="stack-card__header">
+              <span class="stack-card__logo">🚂</span>
+              <span class="stack-card__tier">Hosting API</span>
+            </div>
+            <h3>Railway</h3>
+            <p>Contenedor Docker para NestJS. Escalado por uso, logs integrados y deploy automático desde GitHub.</p>
+            <span class="stack-card__host">~$3–5 USD/mes inicial</span>
+          </article>
+          <article class="tile stack-card reveal d3">
+            <div class="stack-card__header">
+              <span class="stack-card__logo">R2</span>
+              <span class="stack-card__tier">Storage</span>
+            </div>
+            <h3>Cloudflare R2</h3>
+            <p>Almacenamiento de imágenes de buffets y platos. Compatible S3, sin cargos de egress. 10 GB gratis.</p>
+            <span class="stack-card__host">$0 egress</span>
+          </article>
+          <article class="tile stack-card reveal d4">
+            <div class="stack-card__header">
+              <span class="stack-card__logo">🐘</span>
+              <span class="stack-card__tier">Base de Datos</span>
+            </div>
+            <h3>Neon Tech</h3>
+            <p>PostgreSQL serverless con extensión pgvector. Tablas relacionales del negocio + vectores para memoria del chatbot IA.</p>
+            <span class="stack-card__host">500 MB Free · Siempre activo</span>
+          </article>
+          <article class="tile stack-card reveal d4">
+            <div class="stack-card__header">
+              <span class="stack-card__logo">AI</span>
+              <span class="stack-card__tier">Inteligencia</span>
+            </div>
+            <h3>OpenRouter</h3>
+            <p>Gateway multi-modelo: Laguna XS 2.1 (free) para inicio. Respuestas vía Server-Sent Events (SSE) en tiempo real.</p>
+            <span class="stack-card__host">Sin vendor lock-in</span>
+          </article>
+        </div>
+
+        <div class="stack-extras reveal d4">
+          <span class="pill">Cloudflare DNS/CDN/WAF</span>
+          <span class="pill">Culqi SDK/API</span>
+          <span class="pill">TypeORM</span>
+          <span class="pill">Git + GitHub</span>
+          <span class="pill">JWT / Google Auth</span>
+        </div>
+      </div>
+      <footer class="slide__footer">05 / 13</footer>
+    </section>
+
+    <!-- SLIDE 6 · GANTT -->
+    <section class="slide" data-slide="5" aria-label="Cronograma y Gantt">
+      <div class="slide__content slide__content--wide">
+        <p class="eyebrow reveal">Planificación</p>
+        <h2 class="slide-title reveal d1">Cronograma y Diagrama de Gantt</h2>
+        <p class="slide-lead reveal d2">Fases del proyecto De Parra Spitz — Sprints S8 a S15 (Mayo – Julio 2026).</p>
+
+        <div class="gantt reveal d3">
+          <div class="gantt__head">
+            <span class="gantt__label-col">Fase / Actividad</span>
+            <div class="gantt__months">
+              <span>May S8–S11</span>
+              <span>Jun S12–S13</span>
+              <span>Jun S14</span>
+              <span>Jul S15</span>
+            </div>
+          </div>
+
+          <div class="gantt__row" style="--phase-color: var(--accent)">
+            <span class="gantt__task"><strong>Fase 1</strong> Configuración Core y DB</span>
+            <div class="gantt__track">
+              <div class="gantt__bar" style="--start:1;--end:4;--color:var(--accent)">
+                <span>Diseño Figma · Skills · Arquitectura · BD</span>
+              </div>
+            </div>
+            <span class="gantt__pct">100%</span>
+          </div>
+
+          <div class="gantt__row" style="--phase-color: #5B8DEF">
+            <span class="gantt__task"><strong>Fase 2</strong> Módulos de Negocio y Pagos</span>
+            <div class="gantt__track">
+              <div class="gantt__bar" style="--start:3;--end:5;--color:#5B8DEF">
+                <span>Frontend/Backend · Auth · Culqi</span>
+              </div>
+            </div>
+            <span class="gantt__pct">80%</span>
+          </div>
+
+          <div class="gantt__row" style="--phase-color: #9B6BFF">
+            <span class="gantt__task"><strong>Fase 3</strong> Integración IA y OpenRouter</span>
+            <div class="gantt__track">
+              <div class="gantt__bar gantt__bar--partial" style="--start:4;--end:6;--color:#9B6BFF;--fill:60%">
+                <span>Chatbot SSE · pgvector · OpenRouter</span>
+              </div>
+            </div>
+            <span class="gantt__pct">60%</span>
+          </div>
+
+          <div class="gantt__row" style="--phase-color: #4ADE80">
+            <span class="gantt__task"><strong>Fase 4</strong> Despliegue Producción y QA</span>
+            <div class="gantt__track">
+              <div class="gantt__bar gantt__bar--partial" style="--start:5;--end:7;--color:#4ADE80;--fill:65%">
+                <span>Pruebas · Integración · Documentación</span>
+              </div>
+            </div>
+            <span class="gantt__pct">65%</span>
+          </div>
+        </div>
+
+        <div class="phase-legend reveal d4">
+          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:var(--accent)"></span>Fase 1 — Core &amp; DB</div>
+          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#5B8DEF"></span>Fase 2 — Negocio &amp; Pagos</div>
+          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#9B6BFF"></span>Fase 3 — IA</div>
+          <div class="phase-legend__item"><span class="phase-legend__dot" style="background:#4ADE80"></span>Fase 4 — Producción &amp; QA</div>
+        </div>
+      </div>
+      <footer class="slide__footer">06 / 13</footer>
+    </section>
+
+    <!-- SLIDE 7 · COSTOS INICIALES -->
+    <section class="slide" data-slide="6" aria-label="Análisis de costos fase inicial">
+      <div class="slide__content slide__content--wide">
+        <p class="eyebrow reveal">Finanzas</p>
+        <h2 class="slide-title reveal d1">Análisis de Costos — Fase Inicial</h2>
+        <p class="slide-lead reveal d2">Planes gratuitos y costo base mínimo para validar el producto en producción.</p>
+
+        <div class="cost-summary reveal d2">
+          <div class="cost-summary__total">
+            <span class="cost-summary__label">Costo mensual base estimado</span>
+            <span class="cost-summary__value">$3.00 – $5.00 <small>USD/mes</small></span>
+            <span class="cost-summary__note">Solo Railway (contenedor NestJS)</span>
+          </div>
+        </div>
+
+        <div class="table-wrap reveal d3">
+          <table class="data-table">
             <thead>
               <tr>
-                <th>Herramienta</th>
-                <th>Uso en el Sistema</th>
-                <th>Criterio de Selección</th>
+                <th>Servicio</th>
+                <th>Plan / Tier</th>
+                <th>Incluido</th>
+                <th>Costo</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><span class="tech-badge">Astro + React</span></td><td>Interfaz web, componentes reutilizables y navegación</td><td>Interfaz dinámica, escalabilidad y UX moderna</td></tr>
-              <tr><td><span class="tech-badge">TypeScript</span></td><td>Tipado estático en frontend y backend</td><td>Mantenibilidad, detección temprana de errores</td></tr>
-              <tr><td><span class="tech-badge">NestJS</span></td><td>API REST, lógica de negocio y servicios</td><td>Arquitectura modular, TypeScript y buenas prácticas</td></tr>
-              <tr><td><span class="tech-badge">PostgreSQL + TypeORM</span></td><td>Persistencia, relaciones y consultas + pgvector</td><td>Integridad de datos y modelado relacional</td></tr>
-              <tr><td><span class="tech-badge">OpenRouter + IA</span></td><td>Chatbot inteligente y recomendaciones SSE</td><td>Automatización y personalización de experiencia</td></tr>
-              <tr><td><span class="tech-badge">Cloudflare</span></td><td>DNS, CDN, SSL, WAF y almacenamiento R2</td><td>Seguridad, rendimiento y costo $0</td></tr>
-              <tr><td><span class="tech-badge">Culqi</span></td><td>Procesamiento de pagos (SDK/API)</td><td>Integración local y cumplimiento PCI</td></tr>
-              <tr><td><span class="tech-badge">Git + GitHub</span></td><td>Control de versiones y colaboración</td><td>Seguimiento de cambios y respaldo del proyecto</td></tr>
+              <tr>
+                <td><strong>Cloudflare</strong></td>
+                <td>Free</td>
+                <td>DNS, CDN, SSL, WAF, protección DDoS</td>
+                <td class="cost-free">$0.00</td>
+              </tr>
+              <tr>
+                <td><strong>Vercel / Pages</strong></td>
+                <td>Hobby</td>
+                <td>Deploy Astro estático, CDN global, SSL</td>
+                <td class="cost-free">$0.00</td>
+              </tr>
+              <tr>
+                <td><strong>Neon Tech</strong></td>
+                <td>Free</td>
+                <td>PostgreSQL 500 MB + pgvector</td>
+                <td class="cost-free">$0.00</td>
+              </tr>
+              <tr>
+                <td><strong>Cloudflare R2</strong></td>
+                <td>Free</td>
+                <td>10 GB almacenamiento, $0 egress</td>
+                <td class="cost-free">$0.00</td>
+              </tr>
+              <tr>
+                <td><strong>OpenRouter</strong></td>
+                <td>Pay-as-you-go</td>
+                <td>Laguna XS 2.1 — consumo inicial gratuito</td>
+                <td class="cost-free">~$0.00</td>
+              </tr>
+              <tr class="row-highlight">
+                <td><strong>Railway</strong></td>
+                <td>Starter</td>
+                <td>Contenedor NestJS (~512 MB RAM)</td>
+                <td class="cost-paid">$3.00 – $5.00</td>
+              </tr>
             </tbody>
           </table>
         </div>
-
-        <div class="stack-pills animate-in delay-4">
-          <span>Vercel / Pages</span>
-          <span>Railway</span>
-          <span>Neon Tech</span>
-          <span>Laguna XS 2.1</span>
-          <span>JWT / Google Auth</span>
-        </div>
       </div>
-      <div class="slide-number">07 / 12</div>
+      <footer class="slide__footer">07 / 13</footer>
     </section>
 
-    <!-- SLIDE 8: MODELO EMPRESARIAL -->
-    <section class="slide" data-slide="7">
-      <div class="slide-inner">
-        <p class="eyebrow animate-in">Negocio</p>
-        <h2 class="slide-title animate-in delay-1">Modelo Empresarial / Valor Institucional</h2>
-        <div class="value-grid">
-          <article class="value-card animate-in delay-2">
-            <h3>Valor para la Empresa</h3>
-            <ul>
-              <li>Centralización de productos, usuarios y pedidos</li>
-              <li>Automatización de compra y seguimiento de órdenes</li>
-              <li>Atención con asistente virtual IA</li>
-              <li>Control de acceso por roles y permisos</li>
-              <li>Mejor experiencia de compra para usuarios finales</li>
+    <!-- SLIDE 8 · ESCALABILIDAD -->
+    <section class="slide" data-slide="7" aria-label="Guía de escalabilidad financiera">
+      <div class="slide__content slide__content--wide">
+        <p class="eyebrow reveal">Escalabilidad</p>
+        <h2 class="slide-title reveal d1">Guía de Escalabilidad Financiera</h2>
+        <p class="slide-lead reveal d2">Qué ocurre al superar las capas gratuitas con tráfico real (10k – 50k visitas/mes).</p>
+
+        <div class="tier-grid">
+          <article class="tile tier-card reveal d2">
+            <h3>Vercel Pro</h3>
+            <p class="tier-card__trigger">Si se excede ancho de banda del plan Hobby</p>
+            <p class="tier-card__price">$20 <small>USD/mes</small></p>
+            <p>Builds ilimitados, analytics avanzados y mayor límite de transferencia para el frontend estático.</p>
+          </article>
+          <article class="tile tier-card reveal d3">
+            <h3>Railway Developer</h3>
+            <p class="tier-card__trigger">Cuando el contenedor requiere más RAM</p>
+            <p class="tier-card__price">$7 – $15 <small>USD/mes</small></p>
+            <p>Asignación fija de 1 GB RAM, logs persistentes y mayor uptime garantizado para NestJS.</p>
+          </article>
+          <article class="tile tier-card reveal d3">
+            <h3>Neon Tech Launch</h3>
+            <p class="tier-card__trigger">Al superar 500 MB o necesitar DB siempre activa</p>
+            <p class="tier-card__price">$19 <small>USD/mes</small></p>
+            <p>10 GB storage, base siempre activa (sin cold start), respaldos automáticos y branching.</p>
+          </article>
+          <article class="tile tier-card reveal d4">
+            <h3>Cloudflare R2 Extra</h3>
+            <p class="tier-card__trigger">Más de 10 GB de imágenes de catálogo</p>
+            <p class="tier-card__price">$0.015 <small>/GB</small></p>
+            <p>Almacenamiento adicional sin cargos de egress. Escala lineal y predecible.</p>
+          </article>
+          <article class="tile tier-card tier-card--wide reveal d4">
+            <h3>OpenRouter — Migración de Modelos</h3>
+            <p class="tier-card__trigger">Si Laguna XS 2.1 se congestiona o agota cuota gratuita</p>
+            <p class="tier-card__price">$5 – $10 <small>/millón tokens</small></p>
+            <p>Migración transparente a Llama 3 8B o Deepseek V3. Sin cambios en código gracias al gateway OpenRouter. Cero vendor lock-in.</p>
+          </article>
+        </div>
+      </div>
+      <footer class="slide__footer">08 / 13</footer>
+    </section>
+
+    <!-- SLIDE 9 · PROYECCIÓN PRODUCCIÓN -->
+    <section class="slide" data-slide="8" aria-label="Proyección de costos en producción">
+      <div class="slide__content slide__content--wide">
+        <p class="eyebrow reveal">Proyección</p>
+        <h2 class="slide-title reveal d1">Costos en Producción — Tráfico Real</h2>
+        <p class="slide-lead reveal d2">Consolidación mensual vs. infraestructura tradicional en nube.</p>
+
+        <div class="compare-banner reveal d2">
+          <div class="compare-banner__item compare-banner__item--lean">
+            <span class="compare-banner__label">Arquitectura Lean</span>
+            <span class="compare-banner__amount">$35 – $65</span>
+            <span class="compare-banner__unit">USD/mes</span>
+          </div>
+          <div class="compare-banner__vs">vs</div>
+          <div class="compare-banner__item compare-banner__item--legacy">
+            <span class="compare-banner__label">AWS / Azure Tradicional</span>
+            <span class="compare-banner__amount">$150 – $250</span>
+            <span class="compare-banner__unit">USD/mes fijos</span>
+          </div>
+          <div class="compare-banner__savings">
+            Ahorro estimado: <strong>60% – 75%</strong>
+          </div>
+        </div>
+
+        <div class="table-wrap reveal d3">
+          <table class="data-table data-table--projection">
+            <thead>
+              <tr>
+                <th>Componente</th>
+                <th>Tier Escalado</th>
+                <th>Costo Mensual</th>
+                <th>Notas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Frontend (Vercel)</td><td>Pro</td><td>$20.00</td><td>10k–50k visitas/mes</td></tr>
+              <tr><td>Backend (Railway)</td><td>Developer 1GB</td><td>$7 – $15</td><td>NestJS siempre activo</td></tr>
+              <tr><td>Base de Datos (Neon)</td><td>Launch</td><td>$19.00</td><td>10 GB, backups, sin cold start</td></tr>
+              <tr><td>CDN + WAF (Cloudflare)</td><td>Free / Pro</td><td>$0 – $20</td><td>Free suficiente en mayoría de casos</td></tr>
+              <tr><td>Storage R2</td><td>Pay-as-you-go</td><td>$0 – $2</td><td>~$0.015/GB extra</td></tr>
+              <tr><td>IA (OpenRouter)</td><td>Llama 3 / Deepseek</td><td>$5 – $10</td><td>Según volumen de consultas</td></tr>
+              <tr class="row-total"><td colspan="2"><strong>Total Proyectado</strong></td><td><strong>$35 – $65</strong></td><td>vs $150–$250 tradicional</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="slide__footer">09 / 13</footer>
+    </section>
+
+    <!-- SLIDE 10 · MANTENIMIENTO -->
+    <section class="slide" data-slide="9" aria-label="Mantenimiento técnico y costos operativos">
+      <div class="slide__content">
+        <p class="eyebrow reveal">Operaciones</p>
+        <h2 class="slide-title reveal d1">Mantenimiento Técnico y Costos Operativos</h2>
+        <p class="slide-lead reveal d2">Necesidades de soporte preventivo y correctivo para mantener la plataforma saludable.</p>
+
+        <div class="ops-grid">
+          <article class="tile ops-card reveal d2">
+            <h3>Costos Fijos de Soporte</h3>
+            <ul class="ops-list">
+              <li>
+                <strong>Dominio Anual</strong>
+                <span>~$10 – $15 USD/año (.com vía Cloudflare Registrar)</span>
+              </li>
+              <li>
+                <strong>Monitoreo de Errores</strong>
+                <span>Sentry Free Tier o GlitchTip self-hosted ($0)</span>
+              </li>
+              <li>
+                <strong>SSL y CDN</strong>
+                <span>Incluido en Cloudflare Free — sin costo adicional</span>
+              </li>
+              <li>
+                <strong>Backups DB</strong>
+                <span>Neon Launch incluye respaldos automáticos diarios</span>
+              </li>
             </ul>
           </article>
-          <article class="value-card animate-in delay-3">
-            <h3>Beneficios Operativos</h3>
-            <ul>
-              <li>Reducción del tiempo en gestión manual de pedidos</li>
-              <li>Mayor control de inventario y disponibilidad</li>
-              <li>Seguimiento en tiempo real de operaciones</li>
-              <li>Mejora en atención con respuestas automatizadas</li>
-              <li>Escalamiento para nuevos módulos y funcionalidades</li>
+          <article class="tile ops-card reveal d3">
+            <h3>Horas de Esfuerzo de Desarrollo</h3>
+            <p class="ops-card__hours">4 – 8 <small>horas/mes</small></p>
+            <ul class="ops-list">
+              <li>
+                <strong>Dependencias</strong>
+                <span><code>npm audit fix</code>, actualización de paquetes NestJS y Astro</span>
+              </li>
+              <li>
+                <strong>Índices Vectoriales</strong>
+                <span>Optimización de pgvector, limpieza de embeddings obsoletos</span>
+              </li>
+              <li>
+                <strong>Auditoría de APIs</strong>
+                <span>Renovación de credenciales Culqi y OpenRouter</span>
+              </li>
+              <li>
+                <strong>Revisión de Logs</strong>
+                <span>Análisis de errores en Railway y alertas Sentry</span>
+              </li>
             </ul>
           </article>
-          <article class="value-card kpi animate-in delay-4">
-            <h3>Indicadores Sugeridos (KPIs)</h3>
-            <div class="kpi-list">
-              <span>Tasa de conversión visitante → comprador</span>
-              <span>Productos más vendidos</span>
-              <span>Tiempo promedio del asistente virtual</span>
-              <span>Usuarios activos registrados</span>
-              <span>Disponibilidad de inventario</span>
-              <span>Pedidos completados / pendientes / cancelados</span>
+        </div>
+      </div>
+      <footer class="slide__footer">10 / 13</footer>
+    </section>
+
+    <!-- SLIDE 11 · VALOR DE NEGOCIO -->
+    <section class="slide" data-slide="10" aria-label="Valor de negocio y beneficios operativos">
+      <div class="slide__content">
+        <p class="eyebrow reveal">Estrategia</p>
+        <h2 class="slide-title reveal d1">Valor de Negocio y Beneficios Operativos</h2>
+        <p class="slide-lead reveal d2">Pilares estratégicos que justifican la inversión ante la junta directiva de Hoja de Parra Spitz.</p>
+
+        <div class="pillar-grid">
+          <article class="tile pillar-card reveal d2">
+            <div class="pillar-card__icon">📉</div>
+            <h3>Reducción del Riesgo Financiero</h3>
+            <p>Inversión inicial de $3–5 USD/mes vs. $150–250 en nubes tradicionales. El negocio valida el producto sin comprometer capital operativo en infraestructura ociosa.</p>
+          </article>
+          <article class="tile pillar-card reveal d3">
+            <div class="pillar-card__icon">🚀</div>
+            <h3>Agilidad en Time-to-Market</h3>
+            <p>Deploy en minutos, no semanas. Astro compila estático, Railway despliega desde Git. La empresa de catering puede atender pedidos digitales en semanas, no meses.</p>
+          </article>
+          <article class="tile pillar-card reveal d3">
+            <div class="pillar-card__icon">🔓</div>
+            <h3>Cero Vendor Lock-in</h3>
+            <p>OpenRouter permite cambiar modelos IA sin reescribir código. PostgreSQL estándar migra a cualquier host. Docker en Railway es portable a Fly.io, Render o VPS propio.</p>
+          </article>
+          <article class="tile pillar-card reveal d4">
+            <div class="pillar-card__icon">📊</div>
+            <h3>Predictibilidad de Costos</h3>
+            <p>Cada componente tiene pricing público y lineal. La junta directiva recibe proyecciones claras: $3–5 inicial, $35–65 en producción. Sin facturas sorpresa de AWS.</p>
+          </article>
+        </div>
+      </div>
+      <footer class="slide__footer">11 / 13</footer>
+    </section>
+
+    <!-- SLIDE 12 · CASOS DE USO -->
+    <section class="slide" data-slide="11" aria-label="Casos de uso prácticos">
+      <div class="slide__content slide__content--wide">
+        <p class="eyebrow reveal">Flujos</p>
+        <h2 class="slide-title reveal d1">Casos de Uso Prácticos y Optimizados</h2>
+        <p class="slide-lead reveal d2">Ejemplos reales de interacción en la plataforma De Parra Spitz.</p>
+
+        <div class="flow-cases">
+          <article class="tile flow-case reveal d2">
+            <div class="flow-case__header">
+              <span class="flow-case__badge">Pago Seguro</span>
+              <span class="flow-case__tech">Culqi SDK/API</span>
             </div>
+            <h3>Procesamiento de Pago de Pedido</h3>
+            <ol class="flow-steps">
+              <li><span>1</span> Cliente selecciona buffet y completa formulario de evento (fecha, invitados, platos).</li>
+              <li><span>2</span> Frontend Astro envía solicitud a <code>POST /api/orders</code> en NestJS (Railway).</li>
+              <li><span>3</span> Backend crea orden en PostgreSQL (Neon) con estado <em>Pendiente</em>.</li>
+              <li><span>4</span> Culqi SDK tokeniza tarjeta en el cliente — datos sensibles nunca tocan nuestro servidor.</li>
+              <li><span>5</span> NestJS confirma cargo vía API Culqi, actualiza estado a <em>Aprobado</em> y notifica al admin.</li>
+            </ol>
+          </article>
+
+          <article class="tile flow-case reveal d3">
+            <div class="flow-case__header">
+              <span class="flow-case__badge">IA Conversacional</span>
+              <span class="flow-case__tech">SSE + OpenRouter</span>
+            </div>
+            <h3>Consulta al Chatbot de Recomendaciones</h3>
+            <ol class="flow-steps">
+              <li><span>1</span> Cliente abre chatbot en portal público: <em>"¿Qué buffet recomiendan para 80 personas?"</em></li>
+              <li><span>2</span> Frontend abre conexión SSE a <code>GET /api/ai/chat</code> en NestJS.</li>
+              <li><span>3</span> Backend recupera contexto relevante vía pgvector (embeddings de carta y FAQs).</li>
+              <li><span>4</span> NestJS envía prompt enriquecido a OpenRouter (Laguna XS 2.1 o Llama 3 8B).</li>
+              <li><span>5</span> Respuesta se transmite token a token vía SSE — el usuario ve texto en tiempo real sin esperar respuesta completa.</li>
+            </ol>
           </article>
         </div>
       </div>
-      <div class="slide-number">08 / 12</div>
+      <footer class="slide__footer">12 / 13</footer>
     </section>
 
-    <!-- SLIDE 9: CASOS DE USO -->
-    <section class="slide" data-slide="8">
-      <div class="slide-inner">
-        <p class="eyebrow animate-in">Análisis</p>
-        <h2 class="slide-title animate-in delay-1">Casos de Uso y Épicas</h2>
-        <div class="usecase-grid">
-          <article class="actor-card animate-in delay-2">
-            <h3>👤 Cliente</h3>
-            <ul>
-              <li>Registrarse e iniciar sesión</li>
-              <li>Explorar catálogo de buffets</li>
-              <li>Solicitar cotización de evento</li>
-              <li>Consultar estado del pedido</li>
-              <li>Interactuar con asistente IA</li>
-            </ul>
+    <!-- SLIDE 13 · CONCLUSIONES -->
+    <section class="slide slide--closing" data-slide="12" aria-label="Conclusiones">
+      <div class="slide__content slide__content--center">
+        <p class="eyebrow reveal">Cierre</p>
+        <h2 class="slide-title reveal d1">Conclusiones</h2>
+        <div class="closing-grid reveal d2">
+          <article class="closing-item">
+            <h3>Viabilidad Técnica</h3>
+            <p>Astro + NestJS + PostgreSQL/pgvector + OpenRouter conforman un stack moderno, probado y modular. Cada capa escala de forma independiente sin reescribir la arquitectura.</p>
           </article>
-          <article class="actor-card animate-in delay-3">
-            <h3>🛒 Administrador Ventas</h3>
-            <ul>
-              <li>Aprobar y gestionar pedidos</li>
-              <li>Administrar carta y precios</li>
-              <li>Programar agenda de eventos</li>
-              <li>Visualizar reportes y KPIs</li>
-            </ul>
+          <article class="closing-item">
+            <h3>Viabilidad Económica</h3>
+            <p>De $3–5 USD/mes en validación a $35–65 USD/mes en producción real. Un ahorro del 60–75% frente a infraestructuras cloud tradicionales con costos fijos de $150–250.</p>
           </article>
-          <article class="actor-card animate-in delay-4">
-            <h3>⚙️ Super Admin TI</h3>
-            <ul>
-              <li>Gestionar roles y permisos</li>
-              <li>Auditar y mantener base de datos</li>
-              <li>Configurar integraciones (Culqi, IA)</li>
-            </ul>
+          <article class="closing-item">
+            <h3>Impacto en el Negocio</h3>
+            <p>Hoja de Parra Spitz centraliza pedidos, automatiza atención con IA, procesa pagos seguros y obtiene reportes en tiempo real — todo con inversión infraestructural mínima y predecible.</p>
           </article>
+        </div>
+        <div class="closing-cta reveal d3">
+          <span class="closing-cta__brand">Arquitectura Lean Enterprise 2026</span>
+          <span class="closing-cta__sub">De Parra Spitz · Escalable · Inteligente · Eficiente</span>
         </div>
       </div>
-      <div class="slide-number">09 / 12</div>
+      <footer class="slide__footer">13 / 13</footer>
     </section>
 
-    <!-- SLIDE 10: DER -->
-    <section class="slide" data-slide="9">
-      <div class="slide-inner">
-        <p class="eyebrow animate-in">Datos</p>
-        <h2 class="slide-title animate-in delay-1">Modelo DER — Entidades Principales</h2>
-        <div class="der-grid">
-          <div class="der-entity animate-in delay-2">
-            <h4>Usuario</h4>
-            <span>id · email · rol · auth_provider</span>
-          </div>
-          <div class="der-entity animate-in delay-2">
-            <h4>Buffet</h4>
-            <span>id · nombre · tipo · precio_base</span>
-          </div>
-          <div class="der-entity animate-in delay-3">
-            <h4>Plato</h4>
-            <span>id · nombre · categoría · buffet_id</span>
-          </div>
-          <div class="der-entity animate-in delay-3">
-            <h4>Pedido</h4>
-            <span>id · fecha_evento · invitados · estado</span>
-          </div>
-          <div class="der-entity animate-in delay-4">
-            <h4>DetallePedido</h4>
-            <span>pedido_id · plato_id · cantidad</span>
-          </div>
-          <div class="der-entity animate-in delay-4">
-            <h4>Pago</h4>
-            <span>id · pedido_id · monto · culqi_ref</span>
-          </div>
-          <div class="der-entity animate-in delay-5">
-            <h4>Evento</h4>
-            <span>id · fecha · catering · pedido_id</span>
-          </div>
-          <div class="der-entity animate-in delay-5">
-            <h4>ConversacionIA</h4>
-            <span>id · usuario_id · vectores (pgvector)</span>
-          </div>
-        </div>
-        <p class="der-note animate-in delay-5">Relaciones: Usuario 1—N Pedido · Buffet 1—N Plato · Pedido 1—N DetallePedido · Pedido 1—1 Pago · Pedido 1—1 Evento</p>
-      </div>
-      <div class="slide-number">10 / 12</div>
-    </section>
+  </main>
 
-    <!-- SLIDE 11: ISHIKAWA -->
-    <section class="slide" data-slide="10">
-      <div class="slide-inner">
-        <p class="eyebrow animate-in">Causa raíz</p>
-        <h2 class="slide-title animate-in delay-1">Diagrama de Ishikawa</h2>
-        <p class="slide-subtitle animate-in delay-2">Factores que originan la problemática operativa en MYPES de catering</p>
-        <div class="ishikawa animate-in delay-3">
-          <div class="fish-spine"></div>
-          <div class="fish-head">Gestión<br>ineficiente<br>de pedidos</div>
-          <div class="fish-bone bone-top" style="--angle:-25deg;--left:18%">
-            <span class="bone-label">Procesos</span>
-            <span class="bone-cause">Registro manual · Sin trazabilidad</span>
-          </div>
-          <div class="fish-bone bone-top" style="--angle:-15deg;--left:38%">
-            <span class="bone-label">Tecnología</span>
-            <span class="bone-cause">Sin sistema integrado · Canales dispersos</span>
-          </div>
-          <div class="fish-bone bone-bottom" style="--angle:25deg;--left:18%">
-            <span class="bone-label">Personal</span>
-            <span class="bone-cause">Sobrecarga operativa · Errores humanos</span>
-          </div>
-          <div class="fish-bone bone-bottom" style="--angle:15deg;--left:38%">
-            <span class="bone-label">Clientes</span>
-            <span class="bone-cause">Tiempos de respuesta lentos · Desinformación</span>
-          </div>
-          <div class="fish-bone bone-top" style="--angle:-20deg;--left:58%">
-            <span class="bone-label">Información</span>
-            <span class="bone-cause">Pérdida de datos · Sin reportes</span>
-          </div>
-          <div class="fish-bone bone-bottom" style="--angle:20deg;--left:58%">
-            <span class="bone-label">Costos</span>
-            <span class="bone-cause">Ineficiencia · Oportunidades perdidas</span>
-          </div>
-        </div>
-      </div>
-      <div class="slide-number">11 / 12</div>
-    </section>
-
-    <!-- SLIDE 12: CONCLUSIONES -->
-    <section class="slide" data-slide="11">
-      <div class="slide-inner">
-        <p class="eyebrow animate-in">Cierre</p>
-        <h2 class="slide-title animate-in delay-1">Conclusiones y Recomendaciones</h2>
-        <div class="conclusion-grid">
-          <article class="conclusion-card animate-in delay-2">
-            <h3>Conclusiones</h3>
-            <ul>
-              <li>Se desarrolló una plataforma que optimiza la gestión de productos, usuarios y pedidos</li>
-              <li>React, NestJS y PostgreSQL permitieron un sistema moderno, seguro y escalable</li>
-              <li>La IA mejora la atención al cliente con respuestas automatizadas</li>
-              <li>Roles y permisos contribuyen a la seguridad y administración eficiente</li>
-            </ul>
-          </article>
-          <article class="conclusion-card animate-in delay-3">
-            <h3>Recomendaciones</h3>
-            <ul>
-              <li>Implementar nuevas medidas de seguridad para proteger la información</li>
-              <li>Incorporar reportes y estadísticas para la toma de decisiones</li>
-              <li>Mejorar continuamente el asistente virtual para mayor precisión</li>
-              <li>Realizar pruebas periódicas para garantizar el correcto funcionamiento</li>
-            </ul>
-          </article>
-        </div>
-        <div class="final-brand animate-in delay-4">
-          <span>DE PARRA SPITZ</span>
-          <p>Catering &amp; Eventos · Sistema Web Cloud Native</p>
-        </div>
-      </div>
-      <div class="slide-number">12 / 12</div>
-    </section>
-
-  </div>
-
-  <div class="controls">
-    <button id="prevBtn" aria-label="Diapositiva anterior">←</button>
-    <span id="slideIndicator">1 / 12</span>
-    <button id="nextBtn" aria-label="Siguiente diapositiva">→</button>
-  </div>
+  <nav class="deck-controls" aria-label="Controles de presentación">
+    <button class="deck-controls__btn" id="prevBtn" aria-label="Diapositiva anterior" disabled>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <button class="deck-controls__btn" id="nextBtn" aria-label="Siguiente diapositiva">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
 
   <script src="app.js"></script>
 </body>
