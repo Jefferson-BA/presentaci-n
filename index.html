@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De Parra Spitz — Project Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <nav class="nav-dots" id="navDots" aria-label="Navegación de diapositivas"></nav>
+
+  <div class="presentation" id="presentation">
+
+    <!-- SLIDE 1: PORTADA -->
+    <section class="slide slide-cover active" data-slide="0">
+      <div class="slide-inner">
+        <div class="cover-accent"></div>
+        <p class="eyebrow animate-in">Proyecto empresarial</p>
+        <h1 class="cover-title animate-in delay-1">
+          <span class="thin">Catering &amp;</span>
+          <span class="bold">Eventos</span>
+        </h1>
+        <div class="cover-divider animate-in delay-2"></div>
+        <h2 class="cover-subtitle animate-in delay-2">De Parra Spitz</h2>
+        <p class="cover-desc animate-in delay-3">
+          Desarrollo de un sistema web para la gestión de reservas en la empresa de catering
+          <strong>Hoja de Parra Spitz</strong>
+        </p>
+        <div class="cover-brand animate-in delay-4">
+          <span class="brand-mark">DE PARRA</span>
+          <span class="brand-mark accent">SPITZ</span>
+        </div>
+      </div>
+      <div class="slide-number">01 / 12</div>
+    </section>
+
+    <!-- SLIDE 2: EQUIPO -->
+    <section class="slide" data-slide="1">
+      <div class="slide-inner">
+        <p class="eyebrow animate-in">Team</p>
+        <h2 class="slide-title animate-in delay-1">Equipo de Desarrollo</h2>
+        <p class="slide-subtitle animate-in delay-2">Contained by</p>
+        <div class="team-grid">
+          <article class="team-card animate-in delay-3">
+            <div class="team-avatar">JB</div>
+            <h3>Jeferson Bautista</h3>
+            <p class="team-role">Aporte de Desarrollo</p>
+            <span class="team-badge">Fullstack &amp; IA</span>
+          </article>
+          <article class="team-card animate-in delay-4">
+            <div class="team-avatar">EC</div>
+            <h3>Elias Salomon Cardenas Cuellar</h3>
+            <p class="team-role">Aporte de Desarrollo</p>
+            <span class="team-badge">Fullstack &amp; IA</span>
+          </article>
+        </div>
+      </div>
+      <div class="slide-number">02 / 12</div>
+    </section>
+
+    <!-- SLIDE 3: PROBLEMÁTICA -->
+    <section class="slide" data-slide="2">
+      <div class="slide-inner">
+        <p class="eyebrow animate-in">Contexto</p>
+        <h2 class="slide-title animate-in delay-1">Problemática, Objetivos y Alcance</h2>
+        <div class="three-col">
+          <article class="info-card animate-in delay-2">
+            <h3>Problemática</h3>
+            <p>Las MYPES de catering, como <strong>Hoja de Parra Spitz</strong>, enfrentan dificultades operativas por la ausencia de un sistema tecnológico integrado. La gestión dispersa en canales informales genera pérdida de información, errores manuales y mayores tiempos de respuesta.</p>
+          </article>
+          <article class="info-card highlight animate-in delay-3">
+            <h3>Objetivos</h3>
+            <p>Diseñar e implementar un sistema web a la medida para la gestión y automatización de pedidos, optimizando procesos operativos, centralizando la información comercial y mejorando la eficiencia en la atención al cliente.</p>
+          </article>
+          <article class="info-card animate-in delay-4">
+            <h3>Alcance</h3>
+            <ul>
+              <li>Módulo de gestión de clientes (frontend público)</li>
+              <li>Panel de administración de ventas y pedidos</li>
+              <li>Mantenimiento de información y contenido (CRUD)</li>
+              <li>Reportes básicos de seguimiento del negocio</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="slide-number">03 / 12</div>
+    </section>
+
+    <!-- SLIDE 4: REQUERIMIENTOS -->
+    <section class="slide" data-slide="3">
+      <div class="slide-inner">
+        <p class="eyebrow animate-in">Especificaciones</p>
+        <h2 class="slide-title animate-in delay-1">Requerimientos Funcionales Principales</h2>
+        <div class="req-grid">
+          <div class="req-module animate-in delay-2">
+            <h3>Módulo del Cliente <span>(Portal Público)</span></h3>
+            <ul>
+              <li><strong>RF-01</strong> Autenticación: registro e inicio de sesión seguro</li>
+              <li><strong>RF-02</strong> Catálogo interactivo: buffets árabe, parrillero, criollo</li>
+              <li><strong>RF-03</strong> Solicitud de pedidos: cotización con fecha, invitados y platos</li>
+              <li><strong>RF-04</strong> Trazabilidad: estado en tiempo real (Pendiente / Aprobado)</li>
+            </ul>
+          </div>
+          <div class="req-module animate-in delay-3">
+            <h3>Módulo de Administración <span>(Panel de Ventas)</span></h3>
+            <ul>
+              <li><strong>RF-05</strong> Gestión de pedidos: aprobación y actualización de estados</li>
+              <li><strong>RF-06</strong> Mantenedor de carta (CRUD): platos, buffets y precios</li>
+              <li><strong>RF-07</strong> Agenda de eventos: calendario anti-cruce de fechas</li>
+              <li><strong>RF-08</strong> Reportes y KPIs: ventas, pedidos y alta demanda</li>
+            </ul>
+          </div>
+          <div class="req-module animate-in delay-4">
+            <h3>Super Administrador <span>(Soporte TI)</span></h3>
+            <ul>
+              <li><strong>RF-09</strong> Control de accesos: roles y permisos</li>
+              <li><strong>RF-10</strong> Mantenimiento de datos: control y auditoría PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-number">04 / 12</div>
+    </section>
+
+    <!-- SLIDE 5: GANTT -->
+    <section class="slide" data-slide="4">
+      <div class="slide-inner slide-wide">
+        <p class="eyebrow animate-in">Planificación</p>
+        <h2 class="slide-title animate-in delay-1">Diagrama de Gantt y Cronograma</h2>
+        <p class="slide-subtitle animate-in delay-2">Sprints S8 – S15 · Mayo – Julio 2026</p>
+
+        <div class="gantt-wrapper animate-in delay-3">
+          <div class="gantt-header">
+            <span class="gantt-label-col">Actividad</span>
+            <div class="gantt-weeks">
+              <span>S8<br><small>07-13 May</small></span>
+              <span>S9<br><small>14-20 May</small></span>
+              <span>S10<br><small>21-27 May</small></span>
+              <span>S11<br><small>28 May-04 Jun</small></span>
+              <span>S12<br><small>05-11 Jun</small></span>
+              <span>S13<br><small>12-18 Jun</small></span>
+              <span>S14<br><small>19-25 Jun</small></span>
+              <span>S15<br><small>26 Jun-07 Jul</small></span>
+            </div>
+          </div>
+
+          <div class="gantt-row" data-progress="100">
+            <span class="gantt-task">Diseño en Figma Maker</span>
+            <div class="gantt-bars"><div class="gantt-bar" style="--start:0;--span:1;--progress:100"></div></div>
+            <span class="gantt-pct">100%</span>
+          </div>
+          <div class="gantt-row" data-progress="100">
+            <span class="gantt-task">Skills Utilizables</span>
+            <div class="gantt-bars"><div class="gantt-bar" style="--start:1;--span:1;--progress:100"></div></div>
+            <span class="gantt-pct">100%</span>
+          </div>
+          <div class="gantt-row" data-progress="100">
+            <span class="gantt-task">Diseño del Sistema</span>
+            <div class="gantt-bars"><div class="gantt-bar" style="--start:2;--span:1;--progress:100"></div></div>
+            <span class="gantt-pct">100%</span>
+          </div>
+          <div class="gantt-row" data-progress="100">
+            <span class="gantt-task">Diseño de la Base de Datos</span>
+            <div class="gantt-bars"><div class="gantt-bar" style="--start:3;--span:1;--progress:100"></div></div>
+            <span class="gantt-pct">100%</span>
+          </div>
+          <div class="gantt-row" data-progress="80">
+            <span class="gantt-task">Frontend / Backend</span>
+            <div class="gantt-bars"><div class="gantt-bar" style="--start:4;--span:1;--progress:80"></div></div>
+            <span class="gantt-pct">80%</span>
+          </div>
+          <div class="gantt-row" data-progress="60">
+            <span class="gantt-task">Integración del Sistema</span>
+            <div class="gantt-bars"><div class="gantt-bar partial" style="--start:5;--span:1;--progress:60"></div></div>
+            <span class="gantt-pct">60%</span>
+          </div>
+          <div class="gantt-row" data-progress="70">
+            <span class="gantt-task">Pruebas y Ajustes</span>
+            <div class="gantt-bars"><div class="gantt-bar partial" style="--start:6;--span:1;--progress:70"></div></div>
+            <span class="gantt-pct">70%</span>
+          </div>
+          <div class="gantt-row" data-progress="60">
+            <span class="gantt-task">Documentación Final (3er cap.)</span>
+            <div class="gantt-bars"><div class="gantt-bar partial" style="--start:7;--span:1;--progress:60"></div></div>
+            <span class="gantt-pct">60%</span>
+          </div>
+        </div>
+
+        <div class="cronograma-timeline animate-in delay-4">
+          <div class="timeline-item"><span class="tl-phase">Fase 1</span><span>Diseño UX/UI y arquitectura</span><span class="tl-date">May S8–S11</span></div>
+          <div class="timeline-item"><span class="tl-phase">Fase 2</span><span>Desarrollo Fullstack</span><span class="tl-date">Jun S12–S13</span></div>
+          <div class="timeline-item"><span class="tl-phase">Fase 3</span><span>QA, integración y documentación</span><span class="tl-date">Jun–Jul S14–S15</span></div>
+        </div>
+      </div>
+      <div class="slide-number">05 / 12</div>
+    </section>
+
+    <!-- SLIDE 6: ARQUITECTURA -->
+    <section class="slide" data-slide="5">
+      <div class="slide-inner slide-wide">
+        <p class="eyebrow animate-in">Infraestructura</p>
+        <h2 class="slide-title animate-in delay-1">Diagrama de Arquitectura de Despliegue</h2>
+        <p class="slide-subtitle animate-in delay-2">Componentes principales de la plataforma De Parra Spitz</p>
+
+        <div class="arch-diagram animate-in delay-3">
+          <div class="arch-node arch-users">
+            <span>👥 CLIENTES / ADMINISTRADORES</span>
+          </div>
+          <div class="arch-connector"></div>
+          <div class="arch-node arch-cloudflare">
+            <span class="arch-icon">☁</span>
+            <strong>Cloudflare</strong>
+            <small>DNS + CDN + SSL + WAF · Free</small>
+          </div>
+          <div class="arch-split">
+            <div class="arch-branch">
+              <div class="arch-connector-h"></div>
+              <div class="arch-node arch-frontend">
+                <strong>FRONTEND WEB</strong>
+                <small>Astro + React (Vercel / Pages)</small>
+                <em>Costo $0 — Solo interfaz UI</em>
+              </div>
+              <div class="arch-connector"></div>
+              <div class="arch-node arch-pagos">
+                <strong>PAGOS</strong>
+                <small>Culqi (SDK/API)</small>
+              </div>
+            </div>
+            <div class="arch-branch">
+              <div class="arch-connector-h"></div>
+              <div class="arch-node arch-backend">
+                <strong>BACKEND API</strong>
+                <small>NestJS (Railway)</small>
+                <em>Corazón del Negocio</em>
+              </div>
+              <div class="arch-modules">
+                <div class="arch-node arch-module">
+                  <strong>MÓDULOS DE NEGOCIO</strong>
+                  <small>Auth (JWT/Google) · Órdenes/Reservas · Pagos/Usuarios</small>
+                </div>
+                <div class="arch-node arch-module ai">
+                  <strong>MÓDULO DE IA</strong>
+                  <small>OpenRouter API · Laguna XS 2.1 (Free) · Respuestas SSE</small>
+                </div>
+                <div class="arch-node arch-module storage">
+                  <strong>STORAGE</strong>
+                  <small>Cloudflare R2 (Imágenes) · Costo $0</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="arch-connector"></div>
+          <div class="arch-node arch-db">
+            <strong>BASE DE DATOS TODO-EN-UNO</strong>
+            <small>PostgreSQL (Neon Tech)</small>
+            <span>Tablas Relacionales (Negocio) · Extensión pgvector (Vectores IA)</span>
+            <em>Costo $0</em>
+          </div>
+        </div>
+      </div>
+      <div class="slide-number">06 / 12</div>
+    </section>
+
+    <!-- SLIDE 7: STACK -->
+    <section class="slide" data-slide="6">
+      <div class="slide-inner slide-wide">
+        <p class="eyebrow animate-in">Tecnología</p>
+        <h2 class="slide-title animate-in delay-1">Stack Tecnológico</h2>
+        <p class="slide-subtitle animate-in delay-2">Selección tecnológica alineada a la propuesta de solución</p>
+
+        <div class="stack-table-wrap animate-in delay-3">
+          <table class="stack-table">
+            <thead>
+              <tr>
+                <th>Herramienta</th>
+                <th>Uso en el Sistema</th>
+                <th>Criterio de Selección</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="tech-badge">Astro + React</span></td><td>Interfaz web, componentes reutilizables y navegación</td><td>Interfaz dinámica, escalabilidad y UX moderna</td></tr>
+              <tr><td><span class="tech-badge">TypeScript</span></td><td>Tipado estático en frontend y backend</td><td>Mantenibilidad, detección temprana de errores</td></tr>
+              <tr><td><span class="tech-badge">NestJS</span></td><td>API REST, lógica de negocio y servicios</td><td>Arquitectura modular, TypeScript y buenas prácticas</td></tr>
+              <tr><td><span class="tech-badge">PostgreSQL + TypeORM</span></td><td>Persistencia, relaciones y consultas + pgvector</td><td>Integridad de datos y modelado relacional</td></tr>
+              <tr><td><span class="tech-badge">OpenRouter + IA</span></td><td>Chatbot inteligente y recomendaciones SSE</td><td>Automatización y personalización de experiencia</td></tr>
+              <tr><td><span class="tech-badge">Cloudflare</span></td><td>DNS, CDN, SSL, WAF y almacenamiento R2</td><td>Seguridad, rendimiento y costo $0</td></tr>
+              <tr><td><span class="tech-badge">Culqi</span></td><td>Procesamiento de pagos (SDK/API)</td><td>Integración local y cumplimiento PCI</td></tr>
+              <tr><td><span class="tech-badge">Git + GitHub</span></td><td>Control de versiones y colaboración</td><td>Seguimiento de cambios y respaldo del proyecto</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="stack-pills animate-in delay-4">
+          <span>Vercel / Pages</span>
+          <span>Railway</span>
+          <span>Neon Tech</span>
+          <span>Laguna XS 2.1</span>
+          <span>JWT / Google Auth</span>
+        </div>
+      </div>
+      <div class="slide-number">07 / 12</div>
+    </section>
+
+    <!-- SLIDE 8: MODELO EMPRESARIAL -->
+    <section class="slide" data-slide="7">
+      <div class="slide-inner">
+        <p class="eyebrow animate-in">Negocio</p>
+        <h2 class="slide-title animate-in delay-1">Modelo Empresarial / Valor Institucional</h2>
+        <div class="value-grid">
+          <article class="value-card animate-in delay-2">
+            <h3>Valor para la Empresa</h3>
+            <ul>
+              <li>Centralización de productos, usuarios y pedidos</li>
+              <li>Automatización de compra y seguimiento de órdenes</li>
+              <li>Atención con asistente virtual IA</li>
+              <li>Control de acceso por roles y permisos</li>
+              <li>Mejor experiencia de compra para usuarios finales</li>
+            </ul>
+          </article>
+          <article class="value-card animate-in delay-3">
+            <h3>Beneficios Operativos</h3>
+            <ul>
+              <li>Reducción del tiempo en gestión manual de pedidos</li>
+              <li>Mayor control de inventario y disponibilidad</li>
+              <li>Seguimiento en tiempo real de operaciones</li>
+              <li>Mejora en atención con respuestas automatizadas</li>
+              <li>Escalamiento para nuevos módulos y funcionalidades</li>
+            </ul>
+          </article>
+          <article class="value-card kpi animate-in delay-4">
+            <h3>Indicadores Sugeridos (KPIs)</h3>
+            <div class="kpi-list">
+              <span>Tasa de conversión visitante → comprador</span>
+              <span>Productos más vendidos</span>
+              <span>Tiempo promedio del asistente virtual</span>
+              <span>Usuarios activos registrados</span>
+              <span>Disponibilidad de inventario</span>
+              <span>Pedidos completados / pendientes / cancelados</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="slide-number">08 / 12</div>
+    </section>
+
+    <!-- SLIDE 9: CASOS DE USO -->
+    <section class="slide" data-slide="8">
+      <div class="slide-inner">
+        <p class="eyebrow animate-in">Análisis</p>
+        <h2 class="slide-title animate-in delay-1">Casos de Uso y Épicas</h2>
+        <div class="usecase-grid">
+          <article class="actor-card animate-in delay-2">
+            <h3>👤 Cliente</h3>
+            <ul>
+              <li>Registrarse e iniciar sesión</li>
+              <li>Explorar catálogo de buffets</li>
+              <li>Solicitar cotización de evento</li>
+              <li>Consultar estado del pedido</li>
+              <li>Interactuar con asistente IA</li>
+            </ul>
+          </article>
+          <article class="actor-card animate-in delay-3">
+            <h3>🛒 Administrador Ventas</h3>
+            <ul>
+              <li>Aprobar y gestionar pedidos</li>
+              <li>Administrar carta y precios</li>
+              <li>Programar agenda de eventos</li>
+              <li>Visualizar reportes y KPIs</li>
+            </ul>
+          </article>
+          <article class="actor-card animate-in delay-4">
+            <h3>⚙️ Super Admin TI</h3>
+            <ul>
+              <li>Gestionar roles y permisos</li>
+              <li>Auditar y mantener base de datos</li>
+              <li>Configurar integraciones (Culqi, IA)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="slide-number">09 / 12</div>
+    </section>
+
+    <!-- SLIDE 10: DER -->
+    <section class="slide" data-slide="9">
+      <div class="slide-inner">
+        <p class="eyebrow animate-in">Datos</p>
+        <h2 class="slide-title animate-in delay-1">Modelo DER — Entidades Principales</h2>
+        <div class="der-grid">
+          <div class="der-entity animate-in delay-2">
+            <h4>Usuario</h4>
+            <span>id · email · rol · auth_provider</span>
+          </div>
+          <div class="der-entity animate-in delay-2">
+            <h4>Buffet</h4>
+            <span>id · nombre · tipo · precio_base</span>
+          </div>
+          <div class="der-entity animate-in delay-3">
+            <h4>Plato</h4>
+            <span>id · nombre · categoría · buffet_id</span>
+          </div>
+          <div class="der-entity animate-in delay-3">
+            <h4>Pedido</h4>
+            <span>id · fecha_evento · invitados · estado</span>
+          </div>
+          <div class="der-entity animate-in delay-4">
+            <h4>DetallePedido</h4>
+            <span>pedido_id · plato_id · cantidad</span>
+          </div>
+          <div class="der-entity animate-in delay-4">
+            <h4>Pago</h4>
+            <span>id · pedido_id · monto · culqi_ref</span>
+          </div>
+          <div class="der-entity animate-in delay-5">
+            <h4>Evento</h4>
+            <span>id · fecha · catering · pedido_id</span>
+          </div>
+          <div class="der-entity animate-in delay-5">
+            <h4>ConversacionIA</h4>
+            <span>id · usuario_id · vectores (pgvector)</span>
+          </div>
+        </div>
+        <p class="der-note animate-in delay-5">Relaciones: Usuario 1—N Pedido · Buffet 1—N Plato · Pedido 1—N DetallePedido · Pedido 1—1 Pago · Pedido 1—1 Evento</p>
+      </div>
+      <div class="slide-number">10 / 12</div>
+    </section>
+
+    <!-- SLIDE 11: ISHIKAWA -->
+    <section class="slide" data-slide="10">
+      <div class="slide-inner">
+        <p class="eyebrow animate-in">Causa raíz</p>
+        <h2 class="slide-title animate-in delay-1">Diagrama de Ishikawa</h2>
+        <p class="slide-subtitle animate-in delay-2">Factores que originan la problemática operativa en MYPES de catering</p>
+        <div class="ishikawa animate-in delay-3">
+          <div class="fish-spine"></div>
+          <div class="fish-head">Gestión<br>ineficiente<br>de pedidos</div>
+          <div class="fish-bone bone-top" style="--angle:-25deg;--left:18%">
+            <span class="bone-label">Procesos</span>
+            <span class="bone-cause">Registro manual · Sin trazabilidad</span>
+          </div>
+          <div class="fish-bone bone-top" style="--angle:-15deg;--left:38%">
+            <span class="bone-label">Tecnología</span>
+            <span class="bone-cause">Sin sistema integrado · Canales dispersos</span>
+          </div>
+          <div class="fish-bone bone-bottom" style="--angle:25deg;--left:18%">
+            <span class="bone-label">Personal</span>
+            <span class="bone-cause">Sobrecarga operativa · Errores humanos</span>
+          </div>
+          <div class="fish-bone bone-bottom" style="--angle:15deg;--left:38%">
+            <span class="bone-label">Clientes</span>
+            <span class="bone-cause">Tiempos de respuesta lentos · Desinformación</span>
+          </div>
+          <div class="fish-bone bone-top" style="--angle:-20deg;--left:58%">
+            <span class="bone-label">Información</span>
+            <span class="bone-cause">Pérdida de datos · Sin reportes</span>
+          </div>
+          <div class="fish-bone bone-bottom" style="--angle:20deg;--left:58%">
+            <span class="bone-label">Costos</span>
+            <span class="bone-cause">Ineficiencia · Oportunidades perdidas</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide-number">11 / 12</div>
+    </section>
+
+    <!-- SLIDE 12: CONCLUSIONES -->
+    <section class="slide" data-slide="11">
+      <div class="slide-inner">
+        <p class="eyebrow animate-in">Cierre</p>
+        <h2 class="slide-title animate-in delay-1">Conclusiones y Recomendaciones</h2>
+        <div class="conclusion-grid">
+          <article class="conclusion-card animate-in delay-2">
+            <h3>Conclusiones</h3>
+            <ul>
+              <li>Se desarrolló una plataforma que optimiza la gestión de productos, usuarios y pedidos</li>
+              <li>React, NestJS y PostgreSQL permitieron un sistema moderno, seguro y escalable</li>
+              <li>La IA mejora la atención al cliente con respuestas automatizadas</li>
+              <li>Roles y permisos contribuyen a la seguridad y administración eficiente</li>
+            </ul>
+          </article>
+          <article class="conclusion-card animate-in delay-3">
+            <h3>Recomendaciones</h3>
+            <ul>
+              <li>Implementar nuevas medidas de seguridad para proteger la información</li>
+              <li>Incorporar reportes y estadísticas para la toma de decisiones</li>
+              <li>Mejorar continuamente el asistente virtual para mayor precisión</li>
+              <li>Realizar pruebas periódicas para garantizar el correcto funcionamiento</li>
+            </ul>
+          </article>
+        </div>
+        <div class="final-brand animate-in delay-4">
+          <span>DE PARRA SPITZ</span>
+          <p>Catering &amp; Eventos · Sistema Web Cloud Native</p>
+        </div>
+      </div>
+      <div class="slide-number">12 / 12</div>
+    </section>
+
+  </div>
+
+  <div class="controls">
+    <button id="prevBtn" aria-label="Diapositiva anterior">←</button>
+    <span id="slideIndicator">1 / 12</span>
+    <button id="nextBtn" aria-label="Siguiente diapositiva">→</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
